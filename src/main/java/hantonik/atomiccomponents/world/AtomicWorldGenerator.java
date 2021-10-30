@@ -40,9 +40,9 @@ public class AtomicWorldGenerator {
         OreFeatureConfig config;
 
         // COPPER ORE
-        size = 10;
-        rate = 14;
-        height = 60;
+        size = 12;
+        rate = 20;
+        height = 70;
         config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AtomicBlocks.COPPER_ORE.get().defaultBlockState(), size);
 
         COPPER_ORE_FEATURE = Feature.ORE.configured(config)
@@ -54,7 +54,7 @@ public class AtomicWorldGenerator {
 
         // LEAD ORE
         size = 7;
-        rate = 10;
+        rate = 5;
         height = 30;
         config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AtomicBlocks.LEAD_ORE.get().defaultBlockState(), size);
 
@@ -66,9 +66,9 @@ public class AtomicWorldGenerator {
         Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(AtomicComponents.MOD_ID, "lead_ore"), LEAD_ORE_FEATURE);
 
         // TITANIUM ORE
-        size = 8;
+        size = 5;
         rate = 3;
-        height = 24;
+        height = 18;
         config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AtomicBlocks.TITANIUM_ORE.get().defaultBlockState(), size);
 
         TITANIUM_ORE_FEATURE = Feature.ORE.configured(config)
@@ -79,7 +79,7 @@ public class AtomicWorldGenerator {
         Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(AtomicComponents.MOD_ID, "titanium_ore"), TITANIUM_ORE_FEATURE);
 
         // TIN ORE
-        size = 12;
+        size = 14;
         rate = 10;
         height = 55;
         config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AtomicBlocks.TIN_ORE.get().defaultBlockState(), size);
@@ -92,8 +92,8 @@ public class AtomicWorldGenerator {
         Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(AtomicComponents.MOD_ID, "tin_ore"), TIN_ORE_FEATURE);
 
         // SILVER ORE
-        size = 8;
-        rate = 7;
+        size = 6;
+        rate = 6;
         height = 20;
         config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AtomicBlocks.SILVER_ORE.get().defaultBlockState(), size);
 

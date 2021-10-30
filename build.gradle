@@ -10,6 +10,7 @@ buildscript {
 
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'idea'
+apply plugin: 'maven-publish'
 
 file('gradle.properties').withReader {
     def prop = new Properties()
@@ -135,3 +136,34 @@ jar {
 }
 
 jar.finalizedBy('reobfJar')
+
+task sourcesJar(type: Jar) {
+    classifier = "sources"
+    from sourceSets.main.allJava
+}
+
+artifacts {
+    archives jar
+    archives sourcesJar
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact jar
+            artifact sourcesJar
+
+            artifactId "$archivesBaseName"
+        }
+    }
+    repositories {
+        maven {
+            url "https://hantonikdev.jfrog.io/artifactory/mods/"
+
+            credentials {
+                username System.getenv("REPO_USER")
+                password System.getenv("REPO_PASSWORD")
+            }
+        }
+    }
+}

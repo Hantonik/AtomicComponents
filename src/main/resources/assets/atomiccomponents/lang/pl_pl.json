@@ -1,5 +1,6 @@
 {
-  "itemGroup.atomiccomponents_materials": "AtomicComponents - Materiały",
+  "itemGroup.atomiccomponents_items": "AtomicComponents - Przedmioty",
+  "itemGroup.atomiccomponents_blocks": "AtomicComponents - Bloki",
 
   "item.atomiccomponents.copper_ingot": "Sztabka miedzi",
   "item.atomiccomponents.lead_ingot": "Sztabka ołowiu",

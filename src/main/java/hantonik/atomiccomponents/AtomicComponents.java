@@ -7,8 +7,6 @@ import hantonik.atomiccomponents.datagen.AtomicLootTableProvider;
 import hantonik.atomiccomponents.datagen.AtomicRecipeProvider;
 import hantonik.atomiccomponents.init.AtomicBlocks;
 import hantonik.atomiccomponents.init.AtomicItems;
-import hantonik.atomiccomponents.init.AtomicTiles;
-import hantonik.atomiccomponents.utils.managers.DynamicResourceManager;
 import hantonik.atomiccomponents.world.AtomicWorldGenerator;
 import hantonik.atomiccore.AtomicCore;
 import net.minecraft.item.ItemGroup;
@@ -44,7 +42,6 @@ public final class AtomicComponents {
 
         bus.register(new AtomicBlocks());
         bus.register(new AtomicItems());
-        bus.register(new AtomicTiles());
 
         AtomicConfigs.setup();
     }
@@ -56,7 +53,6 @@ public final class AtomicComponents {
         MinecraftForge.EVENT_BUS.register(this);
 
         MinecraftForge.EVENT_BUS.register(new AtomicWorldGenerator());
-        MinecraftForge.EVENT_BUS.register(new DynamicResourceManager());
 
         event.enqueueWork(AtomicWorldGenerator::setup);
 
@@ -70,10 +66,17 @@ public final class AtomicComponents {
         LOGGER.debug(AtomicCore.MOD_MARKER, "Completed client setup");
     }
 
-    public static final ItemGroup MATERIALS_GROUP = new ItemGroup(MOD_ID + "_materials") {
+    public static final ItemGroup ITEMS_GROUP = new ItemGroup(MOD_ID + "_items") {
         @Override
         public ItemStack makeIcon() {
-            return ItemStack.EMPTY;
+            return new ItemStack(AtomicItems.TITANIUM_INGOT.get());
+        }
+    };
+
+    public static final ItemGroup BLOCKS_GROUP = new ItemGroup(MOD_ID + "_blocks") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(AtomicBlocks.TITANIUM_BLOCK.get());
         }
     };
 

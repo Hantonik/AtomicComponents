@@ -1,5 +1,6 @@
 {
-  "itemGroup.atomiccomponents_materials": "AtomicComponents - Materials",
+  "itemGroup.atomiccomponents_items": "AtomicComponents - Items",
+  "itemGroup.atomiccomponents_blocks": "AtomicComponents - Blocks",
 
   "item.atomiccomponents.copper_ingot": "Copper ingot",
   "item.atomiccomponents.lead_ingot": "Lead ingot",

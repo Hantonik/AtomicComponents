@@ -21,6 +21,7 @@ public final class AtomicConfigs {
         final ForgeConfigSpec.Builder client = new ForgeConfigSpec.Builder();
 
         client.push("ClientSettings"); {
+            // TODO
         } client.pop();
 
         CLIENT_SETTINGS = client.build();

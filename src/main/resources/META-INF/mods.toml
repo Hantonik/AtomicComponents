@@ -7,10 +7,10 @@ license="MIT"
     version="${mod_version}"
     displayName="${mod_name}"
     displayURL="https://www.curseforge.com/minecraft/mc-mods/atomiccomponents"
-    logoFile= "../assets/atomiccomponents/logo.png"
+    logoFile= "logo.png"
     updateJSONURL="https://raw.githubusercontent.com/Hantonik/AtomicComponents/1.16.5/update.json"
     authors="Hantonik"
-    description='''TODO
+    description='''This mod adds some materials that might come in handy for other mods in the Atomic Series.
     '''
 
 [[dependencies.atomiccomponents]]

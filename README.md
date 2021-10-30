@@ -1,0 +1,2 @@
+# AtomicComponents [![](https://cf.way2muchnoise.eu/full_541910_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/atomiccomponents) [![CurseForge](http://cf.way2muchnoise.eu/versions/For%20MC_541910_all.svg)](https://www.curseforge.com/minecraft/mc-mods/atomiccomponents)
+This mod adds some materials like copper, lead, titanium, and more!

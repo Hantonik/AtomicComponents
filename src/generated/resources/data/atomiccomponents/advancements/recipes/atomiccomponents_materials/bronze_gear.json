@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:bronze_gear"
+    ]
+  },
+  "criteria": {
+    "has_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:plates/bronze"
+          }
+        ]
+      }
+    },
+    "has_rode": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:rods/bronze"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:bronze_gear"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_plate",
+      "has_rode",
+      "has_the_recipe"
+    ]
+  ]
+}

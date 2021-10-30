@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:blend/steel"
+  },
+  "result": "atomiccomponents:steel_ingot",
+  "experience": 0.3,
+  "cookingtime": 125
+}

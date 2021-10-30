@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:blend/bronze"
+  },
+  "result": "atomiccomponents:bronze_ingot",
+  "experience": 0.3,
+  "cookingtime": 125
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:dusts/silver"
+  },
+  "result": "atomiccomponents:silver_ingot",
+  "experience": 0.2,
+  "cookingtime": 120
+}

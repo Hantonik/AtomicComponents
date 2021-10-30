@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RPR",
+    "P P",
+    "RPR"
+  ],
+  "key": {
+    "P": {
+      "tag": "forge:plates/copper"
+    },
+    "R": {
+      "tag": "forge:rods/copper"
+    }
+  },
+  "result": {
+    "item": "atomiccomponents:copper_gear"
+  }
+}

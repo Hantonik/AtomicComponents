@@ -36,7 +36,7 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         copy(AtomicTags.Blocks.STORAGE_BLOCKS_STEEL, AtomicTags.Items.STORAGE_BLOCKS_STEEL);
         copy(AtomicTags.Blocks.STORAGE_BLOCKS_BRONZE, AtomicTags.Items.STORAGE_BLOCKS_BRONZE);
 
-        addItemsToTag(AtomicTags.Items.DUSTS_COAL, AtomicItems.COAL_DUST);
+        addItemsToTag(AtomicTags.Items.DUSTS_CARBON, AtomicItems.CARBON_DUST);
 
         addItemsToTag(AtomicTags.Items.DUSTS_IRON, AtomicItems.IRON_DUST);
         addItemsToTag(AtomicTags.Items.DUSTS_GOLD, AtomicItems.GOLD_DUST);
@@ -50,8 +50,8 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         addItemsToTag(AtomicTags.Items.DUSTS_STEEL, AtomicItems.STEEL_DUST);
         addItemsToTag(AtomicTags.Items.DUSTS_BRONZE, AtomicItems.BRONZE_DUST);
 
-        addItemsToTag(AtomicTags.Items.BLEND_STEEL, AtomicItems.STEEL_BLEND);
-        addItemsToTag(AtomicTags.Items.BLEND_BRONZE, AtomicItems.BRONZE_BLEND);
+        addItemsToTag(AtomicTags.Items.BLENDS_STEEL, AtomicItems.STEEL_BLEND);
+        addItemsToTag(AtomicTags.Items.BLENDS_BRONZE, AtomicItems.BRONZE_BLEND);
 
         addItemsToTag(AtomicTags.Items.PLATES_IRON, AtomicItems.IRON_PLATE);
         addItemsToTag(AtomicTags.Items.PLATES_GOLD, AtomicItems.GOLD_PLATE);
@@ -113,7 +113,7 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         addItemsToTag(AtomicTags.Items.STORAGE_BLOCKS_STEEL, AtomicBlocks.STEEL_BLOCK);
         addItemsToTag(AtomicTags.Items.STORAGE_BLOCKS_BRONZE, AtomicBlocks.BRONZE_BLOCK);
 
-        appendToTag(Tags.Items.DUSTS, AtomicTags.Items.DUSTS_COAL);
+        appendToTag(Tags.Items.DUSTS, AtomicTags.Items.DUSTS_CARBON);
 
         appendToTag(Tags.Items.DUSTS, AtomicTags.Items.DUSTS_IRON);
         appendToTag(Tags.Items.DUSTS, AtomicTags.Items.DUSTS_GOLD);
@@ -127,8 +127,8 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         appendToTag(Tags.Items.DUSTS, AtomicTags.Items.DUSTS_STEEL);
         appendToTag(Tags.Items.DUSTS, AtomicTags.Items.DUSTS_BRONZE);
 
-        appendToTag(AtomicTags.Items.BLEND, AtomicTags.Items.BLEND_STEEL);
-        appendToTag(AtomicTags.Items.BLEND, AtomicTags.Items.BLEND_BRONZE);
+        appendToTag(AtomicTags.Items.BLENDS, AtomicTags.Items.BLENDS_STEEL);
+        appendToTag(AtomicTags.Items.BLENDS, AtomicTags.Items.BLENDS_BRONZE);
 
         appendToTag(AtomicTags.Items.PLATES, AtomicTags.Items.PLATES_IRON);
         appendToTag(AtomicTags.Items.PLATES, AtomicTags.Items.PLATES_GOLD);

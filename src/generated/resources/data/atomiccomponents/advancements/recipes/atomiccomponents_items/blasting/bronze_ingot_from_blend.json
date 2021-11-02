@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_forge:blend/bronze": {
+    "has_forge:blends/bronze": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:blend/bronze"
+            "tag": "forge:blends/bronze"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_forge:blend/bronze",
+      "has_forge:blends/bronze",
       "has_the_recipe"
     ]
   ]

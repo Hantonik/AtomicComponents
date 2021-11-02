@@ -1,0 +1,9 @@
+{
+  "loader": "atomiccomponents:fluid_texture",
+  "textures": {
+    "still": "atomiccomponents:block/fluid/molten/still",
+    "flowing": "atomiccomponents:block/fluid/molten/flowing"
+  },
+  "color": "5F5F5F"
+}
+

@@ -32,7 +32,8 @@
   "item.atomiccomponents.tin_rod": "Pręt z cyny",
   "item.atomiccomponents.silver_rod": "Srebrny pręt",
 
-  "item.atomiccomponents.coal_dust": "Pył z węgla",
+  "item.atomiccomponents.carbon_dust": "Pył węglowy",
+
   "item.atomiccomponents.iron_dust": "Żelazny pył",
   "item.atomiccomponents.gold_dust": "Złoty pył",
 
@@ -73,5 +74,9 @@
   "block.atomiccomponents.lead_ore": "Ruda ołowiu",
   "block.atomiccomponents.titanium_ore": "Ruda tytanu",
   "block.atomiccomponents.tin_ore": "Ruda cyny",
-  "block.atomiccomponents.silver_ore": "Ruda srebra"
+  "block.atomiccomponents.silver_ore": "Ruda srebra",
+
+  "item.atomiccomponents.molten_titanium_bucket": "Wiadro Stopionego Tytanu",
+  "block.atomiccomponents.molten_titanium_fluid": "Stopiony Tytan",
+  "fluid.atomiccomponents.molten_titanium": "Stopiony Tytan"
 }

@@ -37,7 +37,7 @@ public final class AtomicTags {
     public static class Items {
         public static final Tags.IOptionalNamedTag<Item> PLATES = forgeCategory("plates");
         public static final Tags.IOptionalNamedTag<Item> GEARS = forgeCategory("gears");
-        public static final Tags.IOptionalNamedTag<Item> BLEND = forgeCategory("blend");
+        public static final Tags.IOptionalNamedTag<Item> BLENDS = forgeCategory("blends");
 
         public static final ITag.INamedTag<Item> INGOTS_COPPER = forgeTag("ingots/copper");
         public static final ITag.INamedTag<Item> INGOTS_LEAD = forgeTag("ingots/lead");
@@ -48,7 +48,7 @@ public final class AtomicTags {
         public static final ITag.INamedTag<Item> INGOTS_STEEL = forgeTag("ingots/steel");
         public static final ITag.INamedTag<Item> INGOTS_BRONZE = forgeTag("ingots/bronze");
 
-        public static final ITag.INamedTag<Item> DUSTS_COAL = forgeTag("dusts/coal");
+        public static final ITag.INamedTag<Item> DUSTS_CARBON = forgeTag("dusts/carbon");
 
         public static final ITag.INamedTag<Item> DUSTS_IRON = forgeTag("dusts/iron");
         public static final ITag.INamedTag<Item> DUSTS_GOLD = forgeTag("dusts/gold");
@@ -62,8 +62,8 @@ public final class AtomicTags {
         public static final ITag.INamedTag<Item> DUSTS_STEEL = forgeTag("dusts/steel");
         public static final ITag.INamedTag<Item> DUSTS_BRONZE = forgeTag("dusts/bronze");
 
-        public static final ITag.INamedTag<Item> BLEND_STEEL = forgeTag("blend/steel");
-        public static final ITag.INamedTag<Item> BLEND_BRONZE = forgeTag("blend/bronze");
+        public static final ITag.INamedTag<Item> BLENDS_STEEL = forgeTag("blends/steel");
+        public static final ITag.INamedTag<Item> BLENDS_BRONZE = forgeTag("blends/bronze");
 
         public static final ITag.INamedTag<Item> PLATES_IRON = forgeTag("plates/iron");
         public static final ITag.INamedTag<Item> PLATES_GOLD = forgeTag("plates/gold");

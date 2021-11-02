@@ -60,7 +60,7 @@ public class AtomicLootTableProvider extends LootTableProvider {
         }
 
         private void addCommon() {
-            for (Block block : ForgeRegistries.BLOCKS.getValues().stream().filter(block -> AtomicComponents.MOD_ID.equals(Objects.requireNonNull(block.getRegistryName()).getNamespace()) && !Objects.requireNonNull(block.getRegistryName()).getPath().toLowerCase(Locale.ROOT).contains("ore")).collect(Collectors.toSet()))
+            for (Block block : ForgeRegistries.BLOCKS.getValues().stream().filter(block -> AtomicComponents.MOD_ID.equals(Objects.requireNonNull(block.getRegistryName()).getNamespace()) && !Objects.requireNonNull(block.getRegistryName()).getPath().toLowerCase(Locale.ROOT).contains("ore") && !Objects.requireNonNull(block.getRegistryName()).getPath().toLowerCase(Locale.ROOT).contains("molten")).collect(Collectors.toSet()))
                 this.dropSelf(block);
         }
 

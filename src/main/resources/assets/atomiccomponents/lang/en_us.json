@@ -35,7 +35,8 @@
   "item.atomiccomponents.bronze_rod": "Bronze rod",
   "item.atomiccomponents.steel_rod": "Steel rod",
 
-  "item.atomiccomponents.coal_dust": "Coal dust",
+  "item.atomiccomponents.carbon_dust": "Carbon dust",
+
   "item.atomiccomponents.iron_dust": "Iron dust",
   "item.atomiccomponents.gold_dust": "Golden dust",
 
@@ -76,5 +77,9 @@
   "block.atomiccomponents.lead_ore": "Lead ore",
   "block.atomiccomponents.titanium_ore": "Titanium ore",
   "block.atomiccomponents.tin_ore": "Tin ore",
-  "block.atomiccomponents.silver_ore": "Silver ore"
+  "block.atomiccomponents.silver_ore": "Silver ore",
+
+  "item.atomiccomponents.molten_titanium_bucket": "Molten Titanium Bucket",
+  "block.atomiccomponents.molten_titanium_fluid": "Molten Titanium",
+  "fluid.atomiccomponents.molten_titanium": "Molten Titanium"
 }

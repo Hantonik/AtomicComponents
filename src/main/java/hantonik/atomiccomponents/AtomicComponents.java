@@ -1,16 +1,22 @@
 package hantonik.atomiccomponents;
 
+import hantonik.atomiccomponents.client.model.fluid.FluidTextureModel;
 import hantonik.atomiccomponents.configs.AtomicConfigs;
-import hantonik.atomiccomponents.datagen.AtomicBlockTagsProvider;
-import hantonik.atomiccomponents.datagen.AtomicItemTagsProvider;
-import hantonik.atomiccomponents.datagen.AtomicLootTableProvider;
-import hantonik.atomiccomponents.datagen.AtomicRecipeProvider;
+import hantonik.atomiccomponents.datagen.*;
 import hantonik.atomiccomponents.init.AtomicBlocks;
+import hantonik.atomiccomponents.init.AtomicFluids;
 import hantonik.atomiccomponents.init.AtomicItems;
+import hantonik.atomiccomponents.utils.ModelHelper;
 import hantonik.atomiccomponents.world.AtomicWorldGenerator;
 import hantonik.atomiccore.AtomicCore;
+import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.resources.IReloadableResourceManager;
+import net.minecraft.resources.IResourceManager;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -43,6 +49,8 @@ public final class AtomicComponents {
         bus.register(new AtomicBlocks());
         bus.register(new AtomicItems());
 
+        AtomicFluids.FLUIDS.load(bus);
+
         AtomicConfigs.setup();
     }
 
@@ -63,7 +71,21 @@ public final class AtomicComponents {
     public void clientSetup(final FMLClientSetupEvent event) {
         LOGGER.debug(AtomicCore.MOD_MARKER, "Starting client setup");
 
+        IResourceManager manager = Minecraft.getInstance().getResourceManager();
+
+        if (manager instanceof IReloadableResourceManager)
+            ((IReloadableResourceManager) manager).registerReloadListener(ModelHelper.LISTENER);
+
         LOGGER.debug(AtomicCore.MOD_MARKER, "Completed client setup");
+    }
+
+    @SubscribeEvent
+    public void registerModelLoaders(final ModelRegistryEvent event) {
+        LOGGER.debug(AtomicCore.MOD_MARKER, "Starting model registry setup");
+
+        ModelLoaderRegistry.registerLoader(new ResourceLocation(AtomicComponents.MOD_ID, "fluid_texture"), FluidTextureModel.LOADER);
+
+        LOGGER.debug(AtomicCore.MOD_MARKER, "Completed model registry setup");
     }
 
     public static final ItemGroup ITEMS_GROUP = new ItemGroup(MOD_ID + "_items") {
@@ -86,6 +108,7 @@ public final class AtomicComponents {
         public static void gatherData(GatherDataEvent event) {
             if (event.includeServer()) {
                 event.getGenerator().addProvider(new AtomicBlockTagsProvider(event));
+                event.getGenerator().addProvider(new AtomicFluidTagsProvider(event));
                 event.getGenerator().addProvider(new AtomicItemTagsProvider(event));
                 event.getGenerator().addProvider(new AtomicLootTableProvider(event));
                 event.getGenerator().addProvider(new AtomicRecipeProvider(event));

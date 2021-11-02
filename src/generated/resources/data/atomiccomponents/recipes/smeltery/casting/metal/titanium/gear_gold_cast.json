@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/gear"
+  },
+  "fluid": {
+    "tag": "forge:molten_titanium",
+    "amount": 576
+  },
+  "result": "atomiccomponents:titanium_gear",
+  "cooling_time": 169
+}

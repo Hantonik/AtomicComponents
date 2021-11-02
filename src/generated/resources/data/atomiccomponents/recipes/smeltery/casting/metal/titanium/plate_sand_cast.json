@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/plate"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "forge:molten_titanium",
+    "amount": 144
+  },
+  "result": "atomiccomponents:titanium_plate",
+  "cooling_time": 85
+}

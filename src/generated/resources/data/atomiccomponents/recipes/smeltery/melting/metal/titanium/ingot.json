@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:ingots/titanium"
+  },
+  "result": {
+    "fluid": "atomiccomponents:molten_titanium",
+    "amount": 144
+  },
+  "temperature": 1368,
+  "time": 77
+}

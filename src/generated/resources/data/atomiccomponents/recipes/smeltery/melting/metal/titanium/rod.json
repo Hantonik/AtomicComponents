@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:rods/titanium"
+  },
+  "result": {
+    "fluid": "atomiccomponents:molten_titanium",
+    "amount": 72
+  },
+  "temperature": 1368,
+  "time": 54
+}

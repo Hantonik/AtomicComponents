@@ -22,6 +22,7 @@ repositories {
     maven { url 'https://hantonikdev.jfrog.io/artifactory/mods' }
     maven { url 'https://dvs1.progwml6.com/files/maven' }
     maven { url 'https://www.cursemaven.com' }
+    mavenCentral()
 }
 
 version = "${config.mod_version}"
@@ -92,9 +93,15 @@ dependencies {
     minecraft "net.minecraftforge:forge:${config.mc_version}-${config.forge_version}"
 
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.129")
+
     runtimeOnly fg.deobf("curse.maven:jade-324717:3467445")
 
+    implementation fg.deobf("curse.maven:mantle-74924:3482897")
+    implementation fg.deobf("curse.maven:tinkers-construct-74072:3482903")
+
     implementation fg.deobf("hantonik.atomiccore:AtomicCore-${config.mc_version}:${config.core_version}")
+
+    implementation 'org.projectlombok:lombok:1.18.22'
 }
 
 task replaceResources(type: Copy) {
@@ -129,7 +136,7 @@ jar {
                 "Specification-Version": "1",
                 "Implementation-Title": project.name,
                 "Implementation-Version": version,
-                "Implementation-Vendor" :"Hantonik",
+                "Implementation-Vendor": "Hantonik",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }

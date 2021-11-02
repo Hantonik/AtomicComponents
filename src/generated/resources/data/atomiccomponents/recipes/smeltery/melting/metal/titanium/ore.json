@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:ores/titanium"
+  },
+  "result": {
+    "fluid": "atomiccomponents:molten_titanium",
+    "amount": 288
+  },
+  "temperature": 1368,
+  "time": 109
+}

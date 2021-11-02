@@ -5,6 +5,7 @@ import com.google.common.collect.Maps;
 import com.google.gson.JsonElement;
 import hantonik.atomiccomponents.AtomicComponents;
 import hantonik.atomiccomponents.init.AtomicBlocks;
+import hantonik.atomiccomponents.init.AtomicFluids;
 import hantonik.atomiccomponents.init.AtomicItems;
 import hantonik.atomiccomponents.init.AtomicTags;
 import net.minecraft.data.*;
@@ -16,6 +17,10 @@ import net.minecraft.tags.ITag;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import slimeknights.tconstruct.fluids.TinkerFluids;
+import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
+import slimeknights.tconstruct.library.recipe.melting.MeltingRecipeBuilder;
+import slimeknights.tconstruct.smeltery.TinkerSmeltery;
 
 import java.util.Arrays;
 import java.util.List;
@@ -33,10 +38,13 @@ public class AtomicRecipeProvider extends RecipeProvider {
     protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
         this.registerCraftingRecipes(consumer);
         this.registerFurnaceRecipes(consumer);
+
+        this.registerSmelteryMeltingRecipes(consumer);
+        this.registerSmelteryCastingRecipes(consumer);
     }
 
     private void registerCraftingRecipes(Consumer<IFinishedRecipe> consumer) {
-        this.shapelessCraftingRecipe(AtomicItems.STEEL_BLEND.get(), 2, consumer, "", AtomicTags.Items.DUSTS_IRON, AtomicTags.Items.DUSTS_COAL, AtomicTags.Items.DUSTS_COAL);
+        this.shapelessCraftingRecipe(AtomicItems.STEEL_BLEND.get(), 2, consumer, "", AtomicTags.Items.DUSTS_IRON, AtomicTags.Items.DUSTS_CARBON, AtomicTags.Items.DUSTS_CARBON);
         this.shapelessCraftingRecipe(AtomicItems.BRONZE_BLEND.get(), 3, consumer, "", AtomicTags.Items.DUSTS_COPPER, AtomicTags.Items.DUSTS_TIN, AtomicTags.Items.DUSTS_TIN);
 
         this.shapelessCraftingRecipe(AtomicItems.COPPER_INGOT.get(), 9, consumer, "", AtomicTags.Items.STORAGE_BLOCKS_COPPER);
@@ -71,8 +79,8 @@ public class AtomicRecipeProvider extends RecipeProvider {
     }
 
     private void registerFurnaceRecipes(Consumer<IFinishedRecipe> consumer) {
-        this.blastingRecipe(AtomicTags.Items.BLEND_STEEL, AtomicItems.STEEL_INGOT.get(), 0.3F, 125, "_from_blend", consumer);
-        this.blastingRecipe(AtomicTags.Items.BLEND_BRONZE, AtomicItems.BRONZE_INGOT.get(), 0.3F, 125, "_from_blend", consumer);
+        this.blastingRecipe(AtomicTags.Items.BLENDS_STEEL, AtomicItems.STEEL_INGOT.get(), 0.3F, 125, "_from_blend", consumer);
+        this.blastingRecipe(AtomicTags.Items.BLENDS_BRONZE, AtomicItems.BRONZE_INGOT.get(), 0.3F, 125, "_from_blend", consumer);
 
         this.blastingRecipe(AtomicTags.Items.DUSTS_IRON, Items.IRON_INGOT, 0.2F, 120, "_from_dust", consumer);
         this.blastingRecipe(AtomicTags.Items.DUSTS_GOLD, Items.GOLD_INGOT, 0.2F, 120, "_from_dust", consumer);
@@ -91,6 +99,35 @@ public class AtomicRecipeProvider extends RecipeProvider {
         this.blastingRecipe(AtomicTags.Items.ORES_TITANIUM, AtomicItems.TITANIUM_INGOT.get(), 0.3F, 130, "_from_ore", consumer);
         this.blastingRecipe(AtomicTags.Items.ORES_TIN, AtomicItems.TIN_INGOT.get(), 0.3F, 130, "_from_ore", consumer);
         this.blastingRecipe(AtomicTags.Items.ORES_SILVER, AtomicItems.SILVER_INGOT.get(), 0.3F, 130, "_from_ore", consumer);
+    }
+
+    private void registerSmelteryMeltingRecipes(Consumer<IFinishedRecipe> consumer) {
+        MeltingRecipeBuilder.melting(Ingredient.of(AtomicTags.Items.BLENDS_BRONZE), TinkerFluids.moltenBronze.get(), 144).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/melting/blend/bronze"));
+        MeltingRecipeBuilder.melting(Ingredient.of(AtomicTags.Items.BLENDS_STEEL), TinkerFluids.moltenSteel.get(), 144).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/melting/blend/steel"));
+
+        MeltingRecipeBuilder.melting(Ingredient.of(AtomicTags.Items.STORAGE_BLOCKS_TITANIUM), AtomicFluids.MOLTEN_TITANIUM.get(), 1296).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/melting/metal/titanium/block"));
+        MeltingRecipeBuilder.melting(Ingredient.of(AtomicTags.Items.INGOTS_TITANIUM), AtomicFluids.MOLTEN_TITANIUM.get(), 144).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/melting/metal/titanium/ingot"));
+        MeltingRecipeBuilder.melting(Ingredient.of(AtomicTags.Items.PLATES_TITANIUM), AtomicFluids.MOLTEN_TITANIUM.get(), 144).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/melting/metal/titanium/plate"));
+        MeltingRecipeBuilder.melting(Ingredient.of(AtomicTags.Items.DUSTS_TITANIUM), AtomicFluids.MOLTEN_TITANIUM.get(), 144).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/melting/metal/titanium/dust"));
+        MeltingRecipeBuilder.melting(Ingredient.of(AtomicTags.Items.GEARS_TITANIUM), AtomicFluids.MOLTEN_TITANIUM.get(), 576).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/melting/metal/titanium/gear"));
+        MeltingRecipeBuilder.melting(Ingredient.of(AtomicTags.Items.ORES_TITANIUM), AtomicFluids.MOLTEN_TITANIUM.get(), 288).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/melting/metal/titanium/ore"));
+        MeltingRecipeBuilder.melting(Ingredient.of(AtomicTags.Items.RODS_TITANIUM), AtomicFluids.MOLTEN_TITANIUM.get(), 72).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/melting/metal/titanium/rod"));
+    }
+
+    private void registerSmelteryCastingRecipes(Consumer<IFinishedRecipe> consumer) {
+        ItemCastingRecipeBuilder.basinRecipe(AtomicBlocks.TITANIUM_BLOCK.get()).setFluid(AtomicFluids.MOLTEN_TITANIUM.getForgeTag(), 1296).setCoolingTime(1668, 1296).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/casting/metal/titanium/block"));
+
+        ItemCastingRecipeBuilder.tableRecipe(AtomicItems.TITANIUM_GEAR.get()).setFluid(AtomicFluids.MOLTEN_TITANIUM.getForgeTag(), 576).setCast(TinkerSmeltery.gearCast.getMultiUseTag(), false).setCoolingTime(1668, 576).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/casting/metal/titanium/gear_gold_cast"));
+        ItemCastingRecipeBuilder.tableRecipe(AtomicItems.TITANIUM_GEAR.get()).setFluid(AtomicFluids.MOLTEN_TITANIUM.getForgeTag(), 576).setCast(TinkerSmeltery.gearCast.getSingleUseTag(), true).setCoolingTime(1668, 576).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/casting/metal/titanium/gear_sand_cast"));
+
+        ItemCastingRecipeBuilder.tableRecipe(AtomicItems.TITANIUM_INGOT.get()).setFluid(AtomicFluids.MOLTEN_TITANIUM.getForgeTag(), 144).setCast(TinkerSmeltery.ingotCast.getMultiUseTag(), false).setCoolingTime(1668, 144).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/casting/metal/titanium/ingot_gold_cast"));
+        ItemCastingRecipeBuilder.tableRecipe(AtomicItems.TITANIUM_INGOT.get()).setFluid(AtomicFluids.MOLTEN_TITANIUM.getForgeTag(), 144).setCast(TinkerSmeltery.ingotCast.getSingleUseTag(), true).setCoolingTime(1668, 144).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/casting/metal/titanium/ingot_sand_cast"));
+
+        ItemCastingRecipeBuilder.tableRecipe(AtomicItems.TITANIUM_PLATE.get()).setFluid(AtomicFluids.MOLTEN_TITANIUM.getForgeTag(), 144).setCast(TinkerSmeltery.plateCast.getMultiUseTag(), false).setCoolingTime(1668, 144).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/casting/metal/titanium/plate_gold_cast"));
+        ItemCastingRecipeBuilder.tableRecipe(AtomicItems.TITANIUM_PLATE.get()).setFluid(AtomicFluids.MOLTEN_TITANIUM.getForgeTag(), 144).setCast(TinkerSmeltery.plateCast.getSingleUseTag(), true).setCoolingTime(1668, 144).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/casting/metal/titanium/plate_sand_cast"));
+
+        ItemCastingRecipeBuilder.tableRecipe(AtomicItems.TITANIUM_ROD.get()).setFluid(AtomicFluids.MOLTEN_TITANIUM.getForgeTag(), 72).setCast(TinkerSmeltery.rodCast.getMultiUseTag(), false).setCoolingTime(1668, 72).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/casting/metal/titanium/rod_gold_cast"));
+        ItemCastingRecipeBuilder.tableRecipe(AtomicItems.TITANIUM_ROD.get()).setFluid(AtomicFluids.MOLTEN_TITANIUM.getForgeTag(), 72).setCast(TinkerSmeltery.rodCast.getSingleUseTag(), true).setCoolingTime(1668, 72).build(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "smeltery/casting/metal/titanium/rod_sand_cast"));
     }
 
     private void shapelessCraftingRecipe(IItemProvider output, Consumer<IFinishedRecipe> consumer, String suffix, IItemProvider[]... inputs) {

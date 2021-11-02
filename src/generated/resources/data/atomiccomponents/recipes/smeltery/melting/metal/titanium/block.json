@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:storage_blocks/titanium"
+  },
+  "result": {
+    "fluid": "atomiccomponents:molten_titanium",
+    "amount": 1296
+  },
+  "temperature": 1368,
+  "time": 230
+}

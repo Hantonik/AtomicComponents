@@ -48,7 +48,7 @@ public final class AtomicItems {
     public static final RegistryObject<Item> STEEL_PLATE = register("steel_plate", AtomicComponents.ITEMS_GROUP);
 
     // DUSTS
-    public static final RegistryObject<Item> COAL_DUST = register("coal_dust", () -> new BurnableItem(p -> p.tab(AtomicComponents.ITEMS_GROUP), 900));
+    public static final RegistryObject<Item> CARBON_DUST = register("carbon_dust", () -> new BurnableItem(p -> p.tab(AtomicComponents.ITEMS_GROUP), 900));
 
     public static final RegistryObject<Item> IRON_DUST = register("iron_dust", AtomicComponents.ITEMS_GROUP);
     public static final RegistryObject<Item> GOLD_DUST = register("gold_dust", AtomicComponents.ITEMS_GROUP);

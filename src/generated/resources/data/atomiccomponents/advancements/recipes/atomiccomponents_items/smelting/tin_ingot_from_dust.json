@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/smelting/tin_ingot_from_dust"
+    ]
+  },
+  "criteria": {
+    "has_forge:dusts/tin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:dusts/tin"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/smelting/tin_ingot_from_dust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_forge:dusts/tin",
+      "has_the_recipe"
+    ]
+  ]
+}

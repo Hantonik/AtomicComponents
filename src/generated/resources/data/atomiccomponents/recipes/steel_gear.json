@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RPR",
+    "P P",
+    "RPR"
+  ],
+  "key": {
+    "P": {
+      "tag": "forge:plates/steel"
+    },
+    "R": {
+      "tag": "forge:rods/steel"
+    }
+  },
+  "result": {
+    "item": "atomiccomponents:steel_gear"
+  }
+}

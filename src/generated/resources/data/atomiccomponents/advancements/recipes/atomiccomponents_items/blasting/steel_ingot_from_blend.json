@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/blasting/steel_ingot_from_blend"
+    ]
+  },
+  "criteria": {
+    "has_forge:blends/steel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:blends/steel"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/blasting/steel_ingot_from_blend"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_forge:blends/steel",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:raw/lead",
+    "#forge:raw/titanium",
+    "#forge:raw/tin",
+    "#forge:raw/silver"
+  ]
+}

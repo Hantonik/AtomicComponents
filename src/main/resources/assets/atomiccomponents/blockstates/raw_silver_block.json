@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "atomiccomponents:block/raw_silver_block"
+    }
+  }
+}

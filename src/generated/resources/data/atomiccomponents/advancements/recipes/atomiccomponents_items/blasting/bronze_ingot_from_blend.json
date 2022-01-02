@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/blasting/bronze_ingot_from_blend"
+    ]
+  },
+  "criteria": {
+    "has_forge:blends/bronze": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:blends/bronze"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/blasting/bronze_ingot_from_blend"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_forge:blends/bronze",
+      "has_the_recipe"
+    ]
+  ]
+}

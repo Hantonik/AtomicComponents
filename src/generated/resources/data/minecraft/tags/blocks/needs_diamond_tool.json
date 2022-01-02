@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "atomiccomponents:titanium_block",
+    "atomiccomponents:titanium_ore",
+    "atomiccomponents:steel_block"
+  ]
+}

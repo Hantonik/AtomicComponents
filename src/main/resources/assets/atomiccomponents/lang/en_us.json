@@ -1,0 +1,102 @@
+{
+  "itemGroup.atomiccomponents_items": "AtomicComponents - Items",
+  "itemGroup.atomiccomponents_blocks": "AtomicComponents - Blocks",
+
+  "item.atomiccomponents.lead_ingot": "Lead ingot",
+  "item.atomiccomponents.titanium_ingot": "Titanium ingot",
+  "item.atomiccomponents.tin_ingot": "Tin ingot",
+  "item.atomiccomponents.silver_ingot": "Silver ingot",
+
+  "item.atomiccomponents.bronze_ingot": "Bronze ingot",
+  "item.atomiccomponents.steel_ingot": "Steel ingot",
+
+  "item.atomiccomponents.raw_lead": "Raw lead",
+  "item.atomiccomponents.raw_titanium": "Raw titanium",
+  "item.atomiccomponents.raw_tin": "Raw tin",
+  "item.atomiccomponents.raw_silver": "Raw silver",
+
+  "item.atomiccomponents.iron_plate": "Iron plate",
+  "item.atomiccomponents.gold_plate": "Golden plate",
+
+  "item.atomiccomponents.copper_plate": "Copper plate",
+  "item.atomiccomponents.lead_plate": "Lead plate",
+  "item.atomiccomponents.titanium_plate": "Titanium plate",
+  "item.atomiccomponents.tin_plate": "Tin plate",
+  "item.atomiccomponents.silver_plate": "Silver plate",
+
+  "item.atomiccomponents.bronze_plate": "Bronze plate",
+  "item.atomiccomponents.steel_plate": "Steel plate",
+
+  "item.atomiccomponents.iron_rod": "Iron rod",
+  "item.atomiccomponents.gold_rod": "Golden rod",
+
+  "item.atomiccomponents.copper_rod": "Copper rod",
+  "item.atomiccomponents.lead_rod": "Lead rod",
+  "item.atomiccomponents.titanium_rod": "Titanium rod",
+  "item.atomiccomponents.tin_rod": "Tin rod",
+  "item.atomiccomponents.silver_rod": "Silver rod",
+
+  "item.atomiccomponents.bronze_rod": "Bronze rod",
+  "item.atomiccomponents.steel_rod": "Steel rod",
+
+  "item.atomiccomponents.carbon_dust": "Carbon dust",
+
+  "item.atomiccomponents.iron_dust": "Iron dust",
+  "item.atomiccomponents.gold_dust": "Golden dust",
+
+  "item.atomiccomponents.copper_dust": "Copper dust",
+  "item.atomiccomponents.lead_dust": "Lead dust",
+  "item.atomiccomponents.titanium_dust": "Titanium dust",
+  "item.atomiccomponents.tin_dust": "Tin dust",
+  "item.atomiccomponents.silver_dust": "Silver dust",
+
+  "item.atomiccomponents.bronze_dust": "Bronze dust",
+  "item.atomiccomponents.steel_dust": "Steel dust",
+
+  "item.atomiccomponents.bronze_blend": "Bronze blend",
+  "item.atomiccomponents.steel_blend": "Steel blend",
+
+  "item.atomiccomponents.iron_gear": "Iron gear",
+  "item.atomiccomponents.gold_gear": "Golden gear",
+
+  "item.atomiccomponents.copper_gear": "Copper gear",
+  "item.atomiccomponents.lead_gear": "Lead gear",
+  "item.atomiccomponents.titanium_gear": "Titanium gear",
+  "item.atomiccomponents.tin_gear": "Tin gear",
+  "item.atomiccomponents.silver_gear": "Silver gear",
+
+  "item.atomiccomponents.bronze_gear": "Bronze gear",
+  "item.atomiccomponents.steel_gear": "Steel gear",
+
+  "block.atomiccomponents.lead_block": "Lead block",
+  "block.atomiccomponents.titanium_block": "Titanium block",
+  "block.atomiccomponents.tin_block": "Tin block",
+  "block.atomiccomponents.silver_block": "Silver block",
+
+  "block.atomiccomponents.bronze_block": "Bronze block",
+  "block.atomiccomponents.steel_block": "Steel block",
+
+  "block.atomiccomponents.raw_lead_block": "Raw lead block",
+  "block.atomiccomponents.raw_titanium_block": "Raw titanium block",
+  "block.atomiccomponents.raw_tin_block": "Raw tin block",
+  "block.atomiccomponents.raw_silver_block": "Raw silver block",
+
+  "block.atomiccomponents.lead_ore": "Lead ore",
+  "block.atomiccomponents.titanium_ore": "Titanium ore",
+  "block.atomiccomponents.tin_ore": "Tin ore",
+  "block.atomiccomponents.silver_ore": "Silver ore",
+
+  "block.atomiccomponents.deepslate_lead_ore": "Deepslate lead ore",
+  "block.atomiccomponents.deepslate_titanium_ore": "Deepslate titanium ore",
+  "block.atomiccomponents.deepslate_tin_ore": "Deepslate tin ore",
+  "block.atomiccomponents.deepslate_silver_ore": "Deepslate silver ore",
+
+  "item.atomiccomponents.molten_titanium_bucket": "Molten Titanium Bucket",
+  "block.atomiccomponents.molten_titanium_fluid": "Molten Titanium",
+  "fluid.atomiccomponents.molten_titanium": "Molten Titanium",
+
+  "attributes.atomiccomponents.hold_for_info": "Hold %s for more information",
+
+  "attributes.atomiccomponents.melting_temperature": "Melting temperature",
+  "attributes.atomiccomponents.burning_temperature": "Burning temperature"
+}

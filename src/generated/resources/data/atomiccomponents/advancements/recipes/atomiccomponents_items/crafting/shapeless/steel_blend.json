@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/crafting/shapeless/steel_blend"
+    ]
+  },
+  "criteria": {
+    "has_forge:dusts/iron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:dusts/iron"
+          }
+        ]
+      }
+    },
+    "has_forge:dusts/carbon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:dusts/carbon"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/crafting/shapeless/steel_blend"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_forge:dusts/iron",
+      "has_forge:dusts/carbon",
+      "has_the_recipe"
+    ]
+  ]
+}

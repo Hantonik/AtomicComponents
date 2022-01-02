@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/smelting/lead_ingot_from_raw"
+    ]
+  },
+  "criteria": {
+    "has_forge:raw/lead": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:raw/lead"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/smelting/lead_ingot_from_raw"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_forge:raw/lead",
+      "has_the_recipe"
+    ]
+  ]
+}

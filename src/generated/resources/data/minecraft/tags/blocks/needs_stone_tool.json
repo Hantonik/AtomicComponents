@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "atomiccomponents:tin_block",
+    "atomiccomponents:tin_ore"
+  ]
+}

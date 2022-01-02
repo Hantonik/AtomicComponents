@@ -1,0 +1,99 @@
+{
+  "itemGroup.atomiccomponents_items": "AtomicComponents - Przedmioty",
+  "itemGroup.atomiccomponents_blocks": "AtomicComponents - Bloki",
+
+  "item.atomiccomponents.lead_ingot": "Sztabka ołowiu",
+  "item.atomiccomponents.titanium_ingot": "Sztabka tytanu",
+  "item.atomiccomponents.tin_ingot": "Sztabka cyny",
+  "item.atomiccomponents.silver_ingot": "Sztabka srebra",
+
+  "item.atomiccomponents.bronze_ingot": "Sztabka brązu",
+  "item.atomiccomponents.steel_ingot": "Sztabka stali",
+
+  "item.atomiccomponents.raw_lead": "Surowy ołów",
+  "item.atomiccomponents.raw_titanium": "Surowy tytan",
+  "item.atomiccomponents.raw_tin": "Surowa cyna",
+  "item.atomiccomponents.raw_silver": "Surowe srebra",
+
+  "item.atomiccomponents.iron_plate": "Żelazna płyta",
+  "item.atomiccomponents.gold_plate": "Złota płyta",
+
+  "item.atomiccomponents.copper_plate": "Miedziana płyta",
+  "item.atomiccomponents.lead_plate": "Ołowiana płyta",
+  "item.atomiccomponents.titanium_plate": "Tytanowa płyta",
+  "item.atomiccomponents.tin_plate": "Płyta z cyny",
+  "item.atomiccomponents.silver_plate": "Srebrna płyta",
+
+  "item.atomiccomponents.bronze_plate": "Brązowa płyta",
+  "item.atomiccomponents.steel_plate": "Stalowa płyta",
+
+  "item.atomiccomponents.iron_rod": "Żelazny pręt",
+  "item.atomiccomponents.gold_rod": "Złoty pręt",
+
+  "item.atomiccomponents.copper_rod": "Miedziany pręt",
+  "item.atomiccomponents.lead_rod": "Ołowiany pręt",
+  "item.atomiccomponents.titanium_rod": "Tytanowy pręt",
+  "item.atomiccomponents.tin_rod": "Pręt z cyny",
+  "item.atomiccomponents.silver_rod": "Srebrny pręt",
+
+  "item.atomiccomponents.carbon_dust": "Pył węglowy",
+
+  "item.atomiccomponents.iron_dust": "Żelazny pył",
+  "item.atomiccomponents.gold_dust": "Złoty pył",
+
+  "item.atomiccomponents.copper_dust": "Miedziany pył",
+  "item.atomiccomponents.lead_dust": "Ołowiany pył",
+  "item.atomiccomponents.titanium_dust": "Tytanowy pył",
+  "item.atomiccomponents.tin_dust": "Pył z cyny",
+  "item.atomiccomponents.silver_dust": "Srebrny pył",
+
+  "item.atomiccomponents.bronze_dust": "Brązowy pył",
+  "item.atomiccomponents.steel_dust": "Stalowy pył",
+
+  "item.atomiccomponents.bronze_blend": "Mieszanka brązu",
+  "item.atomiccomponents.steel_blend": "Mieszanka stali",
+
+  "item.atomiccomponents.iron_gear": "Żelazna zębatka",
+  "item.atomiccomponents.gold_gear": "Złota zębatka",
+
+  "item.atomiccomponents.copper_gear": "Miedziana zębatka",
+  "item.atomiccomponents.lead_gear": "Ołowiana zębatka",
+  "item.atomiccomponents.titanium_gear": "Tytanowa zębatka",
+  "item.atomiccomponents.tin_gear": "Cynowa zębatka",
+  "item.atomiccomponents.silver_gear": "Srebrna zębatka",
+
+  "item.atomiccomponents.bronze_gear": "Brązowa zębatka",
+  "item.atomiccomponents.steel_gear": "Stalowa zębatka",
+
+  "block.atomiccomponents.lead_block": "Blok ołowiu",
+  "block.atomiccomponents.titanium_block": "Blok tytanu",
+  "block.atomiccomponents.tin_block": "Blok cyny",
+  "block.atomiccomponents.silver_block": "Blok srebra",
+
+  "block.atomiccomponents.bronze_block": "Blok brązu",
+  "block.atomiccomponents.steel_block": "Blok stali",
+
+  "block.atomiccomponents.raw_lead_block": "Blok surowego ołowiu",
+  "block.atomiccomponents.raw_titanium_block": "Blok surowego tytanu",
+  "block.atomiccomponents.raw_tin_block": "Blok surowej cyny",
+  "block.atomiccomponents.raw_silver_block": "Blok surowego srebra",
+
+  "block.atomiccomponents.lead_ore": "Złoże ołowiu",
+  "block.atomiccomponents.titanium_ore": "Złoże tytanu",
+  "block.atomiccomponents.tin_ore": "Złoże cyny",
+  "block.atomiccomponents.silver_ore": "Złoże srebra",
+
+  "block.atomiccomponents.deepslate_lead_ore": "Łupkowe złoże ołowiu",
+  "block.atomiccomponents.deepslate_titanium_ore": "Łupkowe złoże tytanu",
+  "block.atomiccomponents.deepslate_tin_ore": "Łupkowe złoże cyny",
+  "block.atomiccomponents.deepslate_silver_ore": "Łupkowe złoże srebra",
+
+  "item.atomiccomponents.molten_titanium_bucket": "Wiadro Stopionego Tytanu",
+  "block.atomiccomponents.molten_titanium_fluid": "Stopiony Tytan",
+  "fluid.atomiccomponents.molten_titanium": "Stopiony Tytan",
+
+  "attributes.atomiccomponents.hold_for_info": "Przytrzymaj %s po więcej informacji",
+
+  "attributes.atomiccomponents.melting_temperature": "Temperatura topnienia",
+  "attributes.atomiccomponents.burning_temperature": "Temperatura spalania"
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "atomiccomponents:lead_block",
+    "atomiccomponents:lead_ore",
+    "atomiccomponents:silver_block",
+    "atomiccomponents:silver_ore",
+    "atomiccomponents:bronze_block"
+  ]
+}

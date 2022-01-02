@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "atomiccomponents:titanium_block",
+    "atomiccomponents:titanium_ore",
+    "atomiccomponents:steel_block",
+    "atomiccomponents:lead_block",
+    "atomiccomponents:lead_ore",
+    "atomiccomponents:silver_block",
+    "atomiccomponents:silver_ore",
+    "atomiccomponents:bronze_block",
+    "atomiccomponents:tin_block",
+    "atomiccomponents:tin_ore"
+  ]
+}

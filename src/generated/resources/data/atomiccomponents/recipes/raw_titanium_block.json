@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
+  "key": {
+    "R": {
+      "tag": "forge:raw/titanium"
+    }
+  },
+  "result": {
+    "item": "atomiccomponents:raw_titanium_block"
+  }
+}

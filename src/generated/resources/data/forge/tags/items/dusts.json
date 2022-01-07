@@ -1,7 +1,9 @@
 {
   "replace": false,
   "values": [
+    "#forge:dusts/coke",
     "#forge:dusts/carbon",
+    "#forge:dusts/graphite",
     "#forge:dusts/iron",
     "#forge:dusts/gold",
     "#forge:dusts/copper",

@@ -5,6 +5,7 @@ import hantonik.atomiccomponents.init.AtomicBlocks;
 import hantonik.atomiccomponents.init.AtomicItems;
 import hantonik.atomiccomponents.init.AtomicTags;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
@@ -31,6 +32,9 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         copy(AtomicTags.Blocks.RAW_ORES_TIN, AtomicTags.Items.RAW_ORES_TIN);
         copy(AtomicTags.Blocks.RAW_ORES_SILVER, AtomicTags.Items.RAW_ORES_SILVER);
 
+        copy(AtomicTags.Blocks.STORAGE_BLOCKS_COKE, AtomicTags.Items.STORAGE_BLOCKS_COKE);
+        copy(AtomicTags.Blocks.STORAGE_BLOCKS_GRAPHITE, AtomicTags.Items.STORAGE_BLOCKS_GRAPHITE);
+
         copy(AtomicTags.Blocks.STORAGE_BLOCKS_LEAD, AtomicTags.Items.STORAGE_BLOCKS_LEAD);
         copy(AtomicTags.Blocks.STORAGE_BLOCKS_TITANIUM, AtomicTags.Items.STORAGE_BLOCKS_TITANIUM);
         copy(AtomicTags.Blocks.STORAGE_BLOCKS_TIN, AtomicTags.Items.STORAGE_BLOCKS_TIN);
@@ -39,7 +43,11 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         copy(AtomicTags.Blocks.STORAGE_BLOCKS_STEEL, AtomicTags.Items.STORAGE_BLOCKS_STEEL);
         copy(AtomicTags.Blocks.STORAGE_BLOCKS_BRONZE, AtomicTags.Items.STORAGE_BLOCKS_BRONZE);
 
+        addItemsToTag(AtomicTags.Items.COALS_COKE, AtomicItems.COKE);
+
+        addItemsToTag(AtomicTags.Items.DUSTS_COKE, AtomicItems.COKE_DUST);
         addItemsToTag(AtomicTags.Items.DUSTS_CARBON, AtomicItems.CARBON_DUST);
+        addItemsToTag(AtomicTags.Items.DUSTS_GRAPHITE, AtomicItems.GRAPHITE_DUST);
 
         addItemsToTag(AtomicTags.Items.DUSTS_IRON, AtomicItems.IRON_DUST);
         addItemsToTag(AtomicTags.Items.DUSTS_GOLD, AtomicItems.GOLD_DUST);
@@ -73,6 +81,8 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         addItemsToTag(AtomicTags.Items.PLATES_STEEL, AtomicItems.STEEL_PLATE);
         addItemsToTag(AtomicTags.Items.PLATES_BRONZE, AtomicItems.BRONZE_PLATE);
 
+        addItemsToTag(AtomicTags.Items.RODS_GRAPHITE, AtomicItems.GRAPHITE_ROD);
+
         addItemsToTag(AtomicTags.Items.RODS_IRON, AtomicItems.IRON_ROD);
         addItemsToTag(AtomicTags.Items.RODS_GOLD, AtomicItems.GOLD_ROD);
 
@@ -97,6 +107,8 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         addItemsToTag(AtomicTags.Items.GEARS_STEEL, AtomicItems.STEEL_GEAR);
         addItemsToTag(AtomicTags.Items.GEARS_BRONZE, AtomicItems.BRONZE_GEAR);
 
+        addItemsToTag(AtomicTags.Items.INGOTS_GRAPHITE, AtomicItems.GRAPHITE_INGOT);
+
         addItemsToTag(AtomicTags.Items.INGOTS_LEAD, AtomicItems.LEAD_INGOT);
         addItemsToTag(AtomicTags.Items.INGOTS_TITANIUM, AtomicItems.TITANIUM_INGOT);
         addItemsToTag(AtomicTags.Items.INGOTS_TIN, AtomicItems.TIN_INGOT);
@@ -115,6 +127,9 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         addItemsToTag(AtomicTags.Items.ORES_TIN, AtomicBlocks.TIN_ORE, AtomicBlocks.DEEPSLATE_TIN_ORE);
         addItemsToTag(AtomicTags.Items.ORES_SILVER, AtomicBlocks.SILVER_ORE, AtomicBlocks.DEEPSLATE_SILVER_ORE);
 
+        addItemsToTag(AtomicTags.Items.STORAGE_BLOCKS_COKE, AtomicBlocks.COKE_BLOCK);
+        addItemsToTag(AtomicTags.Items.STORAGE_BLOCKS_GRAPHITE, AtomicBlocks.GRAPHITE_BLOCK);
+
         addItemsToTag(AtomicTags.Items.STORAGE_BLOCKS_LEAD, AtomicBlocks.LEAD_BLOCK);
         addItemsToTag(AtomicTags.Items.STORAGE_BLOCKS_TITANIUM, AtomicBlocks.TITANIUM_BLOCK);
         addItemsToTag(AtomicTags.Items.STORAGE_BLOCKS_TIN, AtomicBlocks.TIN_BLOCK);
@@ -123,7 +138,12 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         addItemsToTag(AtomicTags.Items.STORAGE_BLOCKS_STEEL, AtomicBlocks.STEEL_BLOCK);
         addItemsToTag(AtomicTags.Items.STORAGE_BLOCKS_BRONZE, AtomicBlocks.BRONZE_BLOCK);
 
+        appendToTag(AtomicTags.Items.COALS, AtomicTags.Items.COALS_COKE);
+        appendToTag(ItemTags.COALS, AtomicTags.Items.COALS_COKE);
+
+        appendToTag(Tags.Items.DUSTS, AtomicTags.Items.DUSTS_COKE);
         appendToTag(Tags.Items.DUSTS, AtomicTags.Items.DUSTS_CARBON);
+        appendToTag(Tags.Items.DUSTS, AtomicTags.Items.DUSTS_GRAPHITE);
 
         appendToTag(Tags.Items.DUSTS, AtomicTags.Items.DUSTS_IRON);
         appendToTag(Tags.Items.DUSTS, AtomicTags.Items.DUSTS_GOLD);
@@ -157,6 +177,8 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         appendToTag(AtomicTags.Items.PLATES, AtomicTags.Items.PLATES_STEEL);
         appendToTag(AtomicTags.Items.PLATES, AtomicTags.Items.PLATES_BRONZE);
 
+        appendToTag(Tags.Items.RODS, AtomicTags.Items.RODS_GRAPHITE);
+
         appendToTag(Tags.Items.RODS, AtomicTags.Items.RODS_IRON);
         appendToTag(Tags.Items.RODS, AtomicTags.Items.RODS_GOLD);
 
@@ -181,6 +203,8 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         appendToTag(AtomicTags.Items.GEARS, AtomicTags.Items.GEARS_STEEL);
         appendToTag(AtomicTags.Items.GEARS, AtomicTags.Items.GEARS_BRONZE);
 
+        appendToTag(Tags.Items.INGOTS, AtomicTags.Items.INGOTS_GRAPHITE);
+
         appendToTag(Tags.Items.INGOTS, AtomicTags.Items.INGOTS_LEAD);
         appendToTag(Tags.Items.INGOTS, AtomicTags.Items.INGOTS_TITANIUM);
         appendToTag(Tags.Items.INGOTS, AtomicTags.Items.INGOTS_TIN);
@@ -198,6 +222,9 @@ public class AtomicItemTagsProvider extends ItemTagsProvider {
         appendToTag(Tags.Items.ORES, AtomicTags.Items.ORES_TIN);
         appendToTag(Tags.Items.ORES, AtomicTags.Items.ORES_TITANIUM);
         appendToTag(Tags.Items.ORES, AtomicTags.Items.ORES_SILVER);
+
+        appendToTag(Tags.Items.STORAGE_BLOCKS, AtomicTags.Items.STORAGE_BLOCKS_COKE);
+        appendToTag(Tags.Items.STORAGE_BLOCKS, AtomicTags.Items.STORAGE_BLOCKS_GRAPHITE);
 
         appendToTag(Tags.Items.STORAGE_BLOCKS, AtomicTags.Items.STORAGE_BLOCKS_LEAD);
         appendToTag(Tags.Items.STORAGE_BLOCKS, AtomicTags.Items.STORAGE_BLOCKS_TIN);

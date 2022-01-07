@@ -31,6 +31,9 @@ public class AtomicBlockTagsProvider extends BlockTagsProvider {
         createAndAppend(Tags.Blocks.ORES, AtomicTags.Blocks.ORES_TIN, AtomicBlocks.TIN_ORE, AtomicBlocks.DEEPSLATE_TIN_ORE);
         createAndAppend(Tags.Blocks.ORES, AtomicTags.Blocks.ORES_SILVER, AtomicBlocks.SILVER_ORE, AtomicBlocks.DEEPSLATE_SILVER_ORE);
 
+        createAndAppend(Tags.Blocks.STORAGE_BLOCKS, AtomicTags.Blocks.STORAGE_BLOCKS_COKE, AtomicBlocks.COKE_BLOCK);
+        createAndAppend(Tags.Blocks.STORAGE_BLOCKS, AtomicTags.Blocks.STORAGE_BLOCKS_GRAPHITE, AtomicBlocks.GRAPHITE_BLOCK);
+
         createAndAppend(Tags.Blocks.STORAGE_BLOCKS, AtomicTags.Blocks.STORAGE_BLOCKS_LEAD, AtomicBlocks.LEAD_BLOCK);
         createAndAppend(Tags.Blocks.STORAGE_BLOCKS, AtomicTags.Blocks.STORAGE_BLOCKS_TITANIUM, AtomicBlocks.TITANIUM_BLOCK);
         createAndAppend(Tags.Blocks.STORAGE_BLOCKS, AtomicTags.Blocks.STORAGE_BLOCKS_TIN, AtomicBlocks.TIN_BLOCK);
@@ -45,8 +48,8 @@ public class AtomicBlockTagsProvider extends BlockTagsProvider {
     private void addHarvest() {
         // PICKAXE
         appendToTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_DIAMOND_TOOL, AtomicBlocks.TITANIUM_BLOCK, AtomicBlocks.TITANIUM_ORE, AtomicBlocks.STEEL_BLOCK);
-        appendToTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL, AtomicBlocks.LEAD_BLOCK, AtomicBlocks.LEAD_ORE, AtomicBlocks.SILVER_BLOCK, AtomicBlocks.SILVER_ORE, AtomicBlocks.BRONZE_BLOCK);
-        appendToTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_STONE_TOOL, AtomicBlocks.TIN_BLOCK, AtomicBlocks.TIN_ORE);
+        appendToTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL, AtomicBlocks.GRAPHITE_BLOCK, AtomicBlocks.LEAD_BLOCK, AtomicBlocks.LEAD_ORE, AtomicBlocks.SILVER_BLOCK, AtomicBlocks.SILVER_ORE, AtomicBlocks.BRONZE_BLOCK);
+        appendToTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_STONE_TOOL, AtomicBlocks.TIN_BLOCK, AtomicBlocks.TIN_ORE, AtomicBlocks.COKE_BLOCK);
     }
 
     @SafeVarargs

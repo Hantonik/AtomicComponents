@@ -9,12 +9,14 @@ import hantonik.atomiccomponents.init.AtomicItems;
 import hantonik.atomiccomponents.init.AtomicTags;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 import java.util.Arrays;
@@ -39,8 +41,11 @@ public class AtomicRecipeProvider extends RecipeProvider {
     }
 
     private void registerCraftingRecipes(Consumer<FinishedRecipe> consumer) {
-        this.shapelessCraftingRecipe(AtomicItems.STEEL_BLEND.get(), 2, consumer, "", AtomicTags.Items.DUSTS_IRON, AtomicTags.Items.DUSTS_CARBON, AtomicTags.Items.DUSTS_CARBON);
+        this.shapelessCraftingRecipe(AtomicItems.STEEL_BLEND.get(), 2, consumer, "", AtomicTags.Items.DUSTS_IRON, ItemTags.COALS, ItemTags.COALS);
         this.shapelessCraftingRecipe(AtomicItems.BRONZE_BLEND.get(), 3, consumer, "", AtomicTags.Items.DUSTS_COPPER, AtomicTags.Items.DUSTS_TIN, AtomicTags.Items.DUSTS_TIN);
+
+        this.shapelessCraftingRecipe(AtomicItems.COKE.get(), 9, consumer, "", AtomicTags.Items.STORAGE_BLOCKS_COKE);
+        this.shapelessCraftingRecipe(AtomicItems.GRAPHITE_INGOT.get(), 9, consumer, "", AtomicTags.Items.STORAGE_BLOCKS_GRAPHITE);
 
         this.shapelessCraftingRecipe(AtomicItems.LEAD_INGOT.get(), 9, consumer, "", AtomicTags.Items.STORAGE_BLOCKS_LEAD);
         this.shapelessCraftingRecipe(AtomicItems.TIN_INGOT.get(), 9, consumer, "", AtomicTags.Items.STORAGE_BLOCKS_TIN);
@@ -50,30 +55,33 @@ public class AtomicRecipeProvider extends RecipeProvider {
         this.shapelessCraftingRecipe(AtomicItems.STEEL_INGOT.get(), 9, consumer, "", AtomicTags.Items.STORAGE_BLOCKS_STEEL);
         this.shapelessCraftingRecipe(AtomicItems.BRONZE_INGOT.get(), 9, consumer, "", AtomicTags.Items.STORAGE_BLOCKS_BRONZE);
 
-        ShapedRecipeBuilder.shaped(AtomicBlocks.RAW_LEAD_BLOCK.get()).define('R', AtomicTags.Items.RAW_LEAD).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw", has(AtomicTags.Items.RAW_LEAD)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicBlocks.RAW_TIN_BLOCK.get()).define('R', AtomicTags.Items.RAW_TIN).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw", has(AtomicTags.Items.RAW_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicBlocks.RAW_TITANIUM_BLOCK.get()).define('R', AtomicTags.Items.RAW_TITANIUM).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw", has(AtomicTags.Items.RAW_TITANIUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicBlocks.RAW_SILVER_BLOCK.get()).define('R', AtomicTags.Items.RAW_SILVER).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw", has(AtomicTags.Items.RAW_SILVER)).save(consumer);
+        ShapedRecipeBuilder.shaped(AtomicBlocks.RAW_LEAD_BLOCK.get()).define('R', AtomicTags.Items.RAW_LEAD).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw", has(AtomicTags.Items.RAW_LEAD)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.RAW_LEAD_BLOCK.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicBlocks.RAW_TIN_BLOCK.get()).define('R', AtomicTags.Items.RAW_TIN).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw", has(AtomicTags.Items.RAW_TIN)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.RAW_TIN_BLOCK.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicBlocks.RAW_TITANIUM_BLOCK.get()).define('R', AtomicTags.Items.RAW_TITANIUM).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw", has(AtomicTags.Items.RAW_TITANIUM)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.RAW_TITANIUM_BLOCK.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicBlocks.RAW_SILVER_BLOCK.get()).define('R', AtomicTags.Items.RAW_SILVER).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw", has(AtomicTags.Items.RAW_SILVER)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.RAW_SILVER_BLOCK.get().asItem().getRegistryName().getPath()));
 
-        ShapedRecipeBuilder.shaped(AtomicBlocks.LEAD_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_LEAD).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_LEAD)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicBlocks.TIN_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_TIN).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicBlocks.TITANIUM_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_TITANIUM).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_TITANIUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicBlocks.SILVER_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_SILVER).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_SILVER)).save(consumer);
+        ShapedRecipeBuilder.shaped(AtomicBlocks.COKE_BLOCK.get()).define('C', AtomicTags.Items.INGOTS_GRAPHITE).pattern("CCC").pattern("CCC").pattern("CCC").unlockedBy("has_coke", has(AtomicTags.Items.COALS_COKE)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.COKE_BLOCK.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicBlocks.GRAPHITE_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_GRAPHITE).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_GRAPHITE)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.GRAPHITE_BLOCK.get().asItem().getRegistryName().getPath()));
 
-        ShapedRecipeBuilder.shaped(AtomicBlocks.STEEL_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_STEEL).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_STEEL)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicBlocks.BRONZE_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_BRONZE).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_BRONZE)).save(consumer);
+        ShapedRecipeBuilder.shaped(AtomicBlocks.LEAD_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_LEAD).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_LEAD)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.LEAD_BLOCK.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicBlocks.TIN_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_TIN).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_TIN)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.TIN_BLOCK.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicBlocks.TITANIUM_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_TITANIUM).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_TITANIUM)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.TITANIUM_BLOCK.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicBlocks.SILVER_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_SILVER).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_SILVER)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.SILVER_BLOCK.get().asItem().getRegistryName().getPath()));
 
-        ShapedRecipeBuilder.shaped(AtomicItems.IRON_GEAR.get()).define('P', AtomicTags.Items.PLATES_IRON).define('R', AtomicTags.Items.RODS_IRON).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_IRON)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_IRON)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicItems.GOLD_GEAR.get()).define('P', AtomicTags.Items.PLATES_GOLD).define('R', AtomicTags.Items.RODS_GOLD).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_GOLD)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_GOLD)).save(consumer);
+        ShapedRecipeBuilder.shaped(AtomicBlocks.STEEL_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_STEEL).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_STEEL)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.STEEL_BLOCK.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicBlocks.BRONZE_BLOCK.get()).define('I', AtomicTags.Items.INGOTS_BRONZE).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(AtomicTags.Items.INGOTS_BRONZE)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicBlocks.BRONZE_BLOCK.get().asItem().getRegistryName().getPath()));
 
-        ShapedRecipeBuilder.shaped(AtomicItems.COPPER_GEAR.get()).define('P', AtomicTags.Items.PLATES_COPPER).define('R', AtomicTags.Items.RODS_COPPER).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_COPPER)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_COPPER)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicItems.LEAD_GEAR.get()).define('P', AtomicTags.Items.PLATES_LEAD).define('R', AtomicTags.Items.RODS_LEAD).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_LEAD)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_LEAD)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicItems.TITANIUM_GEAR.get()).define('P', AtomicTags.Items.PLATES_TITANIUM).define('R', AtomicTags.Items.RODS_TITANIUM).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_TITANIUM)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_TITANIUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicItems.TIN_GEAR.get()).define('P', AtomicTags.Items.PLATES_TIN).define('R', AtomicTags.Items.RODS_TIN).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_TIN)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicItems.SILVER_GEAR.get()).define('P', AtomicTags.Items.PLATES_SILVER).define('R', AtomicTags.Items.RODS_SILVER).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_SILVER)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_SILVER)).save(consumer);
+        ShapedRecipeBuilder.shaped(AtomicItems.IRON_GEAR.get()).define('P', AtomicTags.Items.PLATES_IRON).define('R', AtomicTags.Items.RODS_IRON).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_IRON)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_IRON)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicItems.IRON_GEAR.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicItems.GOLD_GEAR.get()).define('P', AtomicTags.Items.PLATES_GOLD).define('R', AtomicTags.Items.RODS_GOLD).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_GOLD)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_GOLD)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicItems.GOLD_GEAR.get().asItem().getRegistryName().getPath()));
 
-        ShapedRecipeBuilder.shaped(AtomicItems.BRONZE_GEAR.get()).define('P', AtomicTags.Items.PLATES_BRONZE).define('R', AtomicTags.Items.RODS_BRONZE).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_BRONZE)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_BRONZE)).save(consumer);
-        ShapedRecipeBuilder.shaped(AtomicItems.STEEL_GEAR.get()).define('P', AtomicTags.Items.PLATES_STEEL).define('R', AtomicTags.Items.RODS_STEEL).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_STEEL)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_STEEL)).save(consumer);
+        ShapedRecipeBuilder.shaped(AtomicItems.COPPER_GEAR.get()).define('P', AtomicTags.Items.PLATES_COPPER).define('R', AtomicTags.Items.RODS_COPPER).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_COPPER)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_COPPER)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicItems.COPPER_GEAR.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicItems.LEAD_GEAR.get()).define('P', AtomicTags.Items.PLATES_LEAD).define('R', AtomicTags.Items.RODS_LEAD).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_LEAD)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_LEAD)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicItems.LEAD_GEAR.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicItems.TITANIUM_GEAR.get()).define('P', AtomicTags.Items.PLATES_TITANIUM).define('R', AtomicTags.Items.RODS_TITANIUM).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_TITANIUM)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_TITANIUM)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicItems.TITANIUM_GEAR.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicItems.TIN_GEAR.get()).define('P', AtomicTags.Items.PLATES_TIN).define('R', AtomicTags.Items.RODS_TIN).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_TIN)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_TIN)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicItems.TIN_GEAR.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicItems.SILVER_GEAR.get()).define('P', AtomicTags.Items.PLATES_SILVER).define('R', AtomicTags.Items.RODS_SILVER).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_SILVER)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_SILVER)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicItems.SILVER_GEAR.get().asItem().getRegistryName().getPath()));
+
+        ShapedRecipeBuilder.shaped(AtomicItems.BRONZE_GEAR.get()).define('P', AtomicTags.Items.PLATES_BRONZE).define('R', AtomicTags.Items.RODS_BRONZE).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_BRONZE)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_BRONZE)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicItems.BRONZE_GEAR.get().asItem().getRegistryName().getPath()));
+        ShapedRecipeBuilder.shaped(AtomicItems.STEEL_GEAR.get()).define('P', AtomicTags.Items.PLATES_STEEL).define('R', AtomicTags.Items.RODS_STEEL).pattern("RPR").pattern("P P").pattern("RPR").unlockedBy("has_plate", has(AtomicTags.Items.PLATES_STEEL)).unlockedBy("has_rode", has(AtomicTags.Items.RODS_STEEL)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/crafting/shaped/" + AtomicItems.STEEL_GEAR.get().asItem().getRegistryName().getPath()));
     }
 
     private void registerFurnaceRecipes(Consumer<FinishedRecipe> consumer) {
@@ -100,6 +108,10 @@ public class AtomicRecipeProvider extends RecipeProvider {
         this.blastingRecipe(AtomicTags.Items.RAW_TITANIUM, AtomicItems.TITANIUM_INGOT.get(), 0.3F, 120, "_from_raw", consumer);
         this.blastingRecipe(AtomicTags.Items.RAW_TIN, AtomicItems.TIN_INGOT.get(), 0.3F, 120, "_from_raw", consumer);
         this.blastingRecipe(AtomicTags.Items.RAW_SILVER, AtomicItems.SILVER_INGOT.get(), 0.3F, 120, "_from_raw", consumer);
+
+        this.smeltingRecipe(AtomicTags.Items.DUSTS_CARBON, AtomicItems.COKE_DUST.get(), 0.6F, 400, "", consumer);
+        this.smeltingRecipe(Tags.Items.STORAGE_BLOCKS_COAL, AtomicBlocks.COKE_BLOCK.get(), 5.4F, 1200, "", consumer);
+        this.smeltingRecipe(Items.COAL, AtomicItems.COKE.get(), 0.6F, 400, "", consumer);
     }
 
 //  private void registerSmelteryMeltingRecipes(Consumer<FinishedRecipe> consumer) {
@@ -291,6 +303,14 @@ public class AtomicRecipeProvider extends RecipeProvider {
 
     private void blastingRecipe(ItemLike input, ItemLike output, float experience, int cookingTime, String nameSuffix, Consumer<FinishedRecipe> consumer) {
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(input), output, experience, (int) ((float) cookingTime / 3) * 2).unlockedBy("has_" + input.asItem().getRegistryName().getPath(), has(input)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/blasting/" + output.asItem().getRegistryName().getPath() + nameSuffix));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(input), output, experience, cookingTime).unlockedBy("has_" + input.asItem().getRegistryName().getPath(), has(input)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/smelting/" + output.asItem().getRegistryName().getPath() + nameSuffix));
+    }
+
+    private void smeltingRecipe(Tag.Named<Item> input, ItemLike output, float experience, int cookingTime, String nameSuffix, Consumer<FinishedRecipe> consumer) {
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(input), output, experience, cookingTime).unlockedBy("has_" + input.getName(), has(input)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/smelting/" + output.asItem().getRegistryName().getPath() + nameSuffix));
+    }
+
+    private void smeltingRecipe(ItemLike input, ItemLike output, float experience, int cookingTime, String nameSuffix, Consumer<FinishedRecipe> consumer) {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(input), output, experience, cookingTime).unlockedBy("has_" + input.asItem().getRegistryName().getPath(), has(input)).save(consumer, new ResourceLocation(AtomicComponents.MOD_ID, "/smelting/" + output.asItem().getRegistryName().getPath() + nameSuffix));
     }
 

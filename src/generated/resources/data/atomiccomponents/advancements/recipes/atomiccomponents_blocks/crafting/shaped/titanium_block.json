@@ -2,26 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "atomiccomponents:copper_gear"
+      "atomiccomponents:/crafting/shaped/titanium_block"
     ]
   },
   "criteria": {
-    "has_plate": {
+    "has_ingot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:plates/copper"
-          }
-        ]
-      }
-    },
-    "has_rode": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "forge:rods/copper"
+            "tag": "forge:ingots/titanium"
           }
         ]
       }
@@ -29,14 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atomiccomponents:copper_gear"
+        "recipe": "atomiccomponents:/crafting/shaped/titanium_block"
       }
     }
   },
   "requirements": [
     [
-      "has_plate",
-      "has_rode",
+      "has_ingot",
       "has_the_recipe"
     ]
   ]

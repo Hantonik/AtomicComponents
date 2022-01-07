@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "atomiccomponents:titanium_gear"
+      "atomiccomponents:/crafting/shaped/copper_gear"
     ]
   },
   "criteria": {
@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:plates/titanium"
+            "tag": "forge:plates/copper"
           }
         ]
       }
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:rods/titanium"
+            "tag": "forge:rods/copper"
           }
         ]
       }
@@ -29,7 +29,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atomiccomponents:titanium_gear"
+        "recipe": "atomiccomponents:/crafting/shaped/copper_gear"
       }
     }
   },

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "atomiccomponents:raw_lead_block"
+      "atomiccomponents:/crafting/shaped/raw_titanium_block"
     ]
   },
   "criteria": {
@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:raw/lead"
+            "tag": "forge:raw/titanium"
           }
         ]
       }
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atomiccomponents:raw_lead_block"
+        "recipe": "atomiccomponents:/crafting/shaped/raw_titanium_block"
       }
     }
   },

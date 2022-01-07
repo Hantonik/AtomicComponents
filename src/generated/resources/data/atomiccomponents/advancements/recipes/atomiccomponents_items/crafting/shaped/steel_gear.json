@@ -2,16 +2,26 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "atomiccomponents:lead_block"
+      "atomiccomponents:/crafting/shaped/steel_gear"
     ]
   },
   "criteria": {
-    "has_ingot": {
+    "has_plate": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:ingots/lead"
+            "tag": "forge:plates/steel"
+          }
+        ]
+      }
+    },
+    "has_rode": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:rods/steel"
           }
         ]
       }
@@ -19,13 +29,14 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atomiccomponents:lead_block"
+        "recipe": "atomiccomponents:/crafting/shaped/steel_gear"
       }
     }
   },
   "requirements": [
     [
-      "has_ingot",
+      "has_plate",
+      "has_rode",
       "has_the_recipe"
     ]
   ]

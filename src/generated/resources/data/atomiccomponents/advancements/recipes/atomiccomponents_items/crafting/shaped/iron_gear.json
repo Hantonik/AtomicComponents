@@ -2,16 +2,26 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "atomiccomponents:raw_tin_block"
+      "atomiccomponents:/crafting/shaped/iron_gear"
     ]
   },
   "criteria": {
-    "has_raw": {
+    "has_plate": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:raw/tin"
+            "tag": "forge:plates/iron"
+          }
+        ]
+      }
+    },
+    "has_rode": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:rods/iron"
           }
         ]
       }
@@ -19,13 +29,14 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atomiccomponents:raw_tin_block"
+        "recipe": "atomiccomponents:/crafting/shaped/iron_gear"
       }
     }
   },
   "requirements": [
     [
-      "has_raw",
+      "has_plate",
+      "has_rode",
       "has_the_recipe"
     ]
   ]

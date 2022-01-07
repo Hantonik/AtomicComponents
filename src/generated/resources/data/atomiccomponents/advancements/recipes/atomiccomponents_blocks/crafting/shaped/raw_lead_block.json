@@ -2,26 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "atomiccomponents:lead_gear"
+      "atomiccomponents:/crafting/shaped/raw_lead_block"
     ]
   },
   "criteria": {
-    "has_plate": {
+    "has_raw": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:plates/lead"
-          }
-        ]
-      }
-    },
-    "has_rode": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "forge:rods/lead"
+            "tag": "forge:raw/lead"
           }
         ]
       }
@@ -29,14 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atomiccomponents:lead_gear"
+        "recipe": "atomiccomponents:/crafting/shaped/raw_lead_block"
       }
     }
   },
   "requirements": [
     [
-      "has_plate",
-      "has_rode",
+      "has_raw",
       "has_the_recipe"
     ]
   ]

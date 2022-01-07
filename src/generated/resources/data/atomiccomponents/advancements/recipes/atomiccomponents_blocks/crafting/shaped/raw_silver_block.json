@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "atomiccomponents:steel_block"
+      "atomiccomponents:/crafting/shaped/raw_silver_block"
     ]
   },
   "criteria": {
-    "has_ingot": {
+    "has_raw": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:ingots/steel"
+            "tag": "forge:raw/silver"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "atomiccomponents:steel_block"
+        "recipe": "atomiccomponents:/crafting/shaped/raw_silver_block"
       }
     }
   },
   "requirements": [
     [
-      "has_ingot",
+      "has_raw",
       "has_the_recipe"
     ]
   ]

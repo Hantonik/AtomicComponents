@@ -2,9 +2,9 @@ package hantonik.atomiccomponents.init;
 
 import hantonik.atomiccomponents.AtomicComponents;
 import hantonik.atomiccomponents.blocks.BasicOreBlock;
-import hantonik.atomiccomponents.items.AttributedBlockItem;
-import hantonik.atomiccomponents.items.AttributedItem;
 import hantonik.atomiccore.block.BasicBlock;
+import hantonik.atomiccore.items.AttributedBlockItem;
+import hantonik.atomiccore.items.AttributedItem;
 import hantonik.atomiccore.items.BasicBlockItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,21 +20,24 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import static hantonik.atomiccomponents.items.AttributedItem.Attributes.create;
+import static hantonik.atomiccore.items.AttributedItem.Attributes.create;
 
 @SuppressWarnings("unused")
 public final class AtomicBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AtomicComponents.MOD_ID);
 
     // MATERIALS
+    public static final RegistryObject<Block> GRAPHITE_BLOCK = register("graphite_block", Material.STONE, SoundType.STONE, 3.0F, 4.25F, true, create().isBurnable(true).burningTime(18000).burningTemperature(673), AtomicComponents.BLOCKS_GROUP);
+
     public static final RegistryObject<Block> LEAD_BLOCK = register("lead_block", Material.METAL, SoundType.METAL, 2.85F, 4.15F, true, create().isFusible(true).meltingTemperature(601), AtomicComponents.BLOCKS_GROUP);
     public static final RegistryObject<Block> TITANIUM_BLOCK = register("titanium_block", Material.METAL, SoundType.METAL, 5.25F, 6.5F, true, create().isFusible(true).meltingTemperature(1941).melted(AtomicFluids.MOLTEN_TITANIUM), AtomicComponents.BLOCKS_GROUP);
     public static final RegistryObject<Block> TIN_BLOCK = register("tin_block", Material.METAL, SoundType.METAL, 2.5F, 3.75F, true, create().isFusible(true).meltingTemperature(505), AtomicComponents.BLOCKS_GROUP);
     public static final RegistryObject<Block> SILVER_BLOCK = register("silver_block", Material.METAL, SoundType.METAL, 3.5F, 5.25F, true, create().isFusible(true).meltingTemperature(1235), AtomicComponents.BLOCKS_GROUP);
 
-    // ALLOYS
     public static final RegistryObject<Block> BRONZE_BLOCK = register("bronze_block", Material.METAL, SoundType.METAL, 4.25F, 5.5F, true, create().isFusible(true).meltingTemperature(1223), AtomicComponents.BLOCKS_GROUP);
     public static final RegistryObject<Block> STEEL_BLOCK = register("steel_block", Material.METAL, SoundType.METAL, 5.0F, 6.25F, true, create().isFusible(true).meltingTemperature(1783), AtomicComponents.BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> COKE_BLOCK = register("coke_block", Material.STONE, SoundType.STONE, 2.5F, 3.75F, true, create().isBurnable(true).burningTime(18000).burningTemperature(973), AtomicComponents.BLOCKS_GROUP);
 
     // ORES
     public static final RegistryObject<Block> LEAD_ORE = register("lead_ore", () -> new BasicOreBlock(p -> p.strength(2.5F, 3.75F)), b -> () -> new AttributedBlockItem(b.get(), p -> p.tab(AtomicComponents.BLOCKS_GROUP), a -> a.isFusible(true).meltingTemperature(601)));

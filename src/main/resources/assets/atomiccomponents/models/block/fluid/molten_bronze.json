@@ -1,0 +1,9 @@
+{
+  "loader": "atomiccore:fluid_texture",
+  "textures": {
+    "still": "atomiccore:block/fluid/molten/still",
+    "flowing": "atomiccore:block/fluid/molten/flowing"
+  },
+  "color": "D58F36"
+}
+

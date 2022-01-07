@@ -16,12 +16,12 @@
         ]
       }
     },
-    "has_forge:dusts/carbon": {
+    "has_minecraft:coals": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:dusts/carbon"
+            "tag": "minecraft:coals"
           }
         ]
       }
@@ -36,7 +36,7 @@
   "requirements": [
     [
       "has_forge:dusts/iron",
-      "has_forge:dusts/carbon",
+      "has_minecraft:coals",
       "has_the_recipe"
     ]
   ]

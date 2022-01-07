@@ -1,8 +1,8 @@
 {
-  "loader": "atomiccomponents:fluid_texture",
+  "loader": "atomiccore:fluid_texture",
   "textures": {
-    "still": "atomiccomponents:block/fluid/molten/still",
-    "flowing": "atomiccomponents:block/fluid/molten/flowing"
+    "still": "atomiccore:block/fluid/molten/still",
+    "flowing": "atomiccore:block/fluid/molten/flowing"
   },
   "color": "383838"
 }

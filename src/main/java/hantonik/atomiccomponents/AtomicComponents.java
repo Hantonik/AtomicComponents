@@ -1,21 +1,13 @@
 package hantonik.atomiccomponents;
 
-import hantonik.atomiccomponents.client.model.fluid.FluidTextureModel;
 import hantonik.atomiccomponents.datagen.*;
 import hantonik.atomiccomponents.init.AtomicBlocks;
 import hantonik.atomiccomponents.init.AtomicFluids;
 import hantonik.atomiccomponents.init.AtomicItems;
-import hantonik.atomiccomponents.utils.helpers.ModelHelper;
 import hantonik.atomiccomponents.world.AtomicWorldGenerator;
 import hantonik.atomiccore.AtomicCore;
-import net.minecraft.client.Minecraft;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.packs.resources.ReloadableResourceManager;
-import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -61,21 +53,7 @@ public final class AtomicComponents {
     public void clientSetup(final FMLClientSetupEvent event) {
         LOGGER.debug(AtomicCore.MOD_MARKER, "Starting client setup");
 
-        ResourceManager manager = Minecraft.getInstance().getResourceManager();
-
-        if (manager instanceof ReloadableResourceManager)
-            ((ReloadableResourceManager) manager).registerReloadListener(ModelHelper.LISTENER);
-
         LOGGER.debug(AtomicCore.MOD_MARKER, "Completed client setup");
-    }
-
-    @SubscribeEvent
-    public void registerModelLoaders(final ModelRegistryEvent event) {
-        LOGGER.debug(AtomicCore.MOD_MARKER, "Starting model registry setup");
-
-        ModelLoaderRegistry.registerLoader(new ResourceLocation(AtomicComponents.MOD_ID, "fluid_texture"), FluidTextureModel.LOADER);
-
-        LOGGER.debug(AtomicCore.MOD_MARKER, "Completed model registry setup");
     }
 
     public static final CreativeModeTab ITEMS_GROUP = new CreativeModeTab(MOD_ID + "_items") {

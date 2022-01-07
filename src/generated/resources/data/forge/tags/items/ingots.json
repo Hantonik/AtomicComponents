@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "#forge:ingots/graphite",
     "#forge:ingots/lead",
     "#forge:ingots/titanium",
     "#forge:ingots/tin",

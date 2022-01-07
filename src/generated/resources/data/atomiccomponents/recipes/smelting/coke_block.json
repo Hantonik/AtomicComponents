@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:storage_blocks/coal"
+  },
+  "result": "atomiccomponents:coke_block",
+  "experience": 5.4,
+  "cookingtime": 1200
+}

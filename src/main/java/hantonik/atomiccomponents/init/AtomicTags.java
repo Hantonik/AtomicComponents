@@ -22,6 +22,9 @@ public final class AtomicTags {
         public static final Tag.Named<Block> ORES_TIN = forgeTag("ores/tin");
         public static final Tag.Named<Block> ORES_SILVER = forgeTag("ores/silver");
 
+        public static final Tag.Named<Block> STORAGE_BLOCKS_COKE = forgeTag("storage_blocks/coke");
+        public static final Tag.Named<Block> STORAGE_BLOCKS_GRAPHITE = forgeTag("storage_blocks/graphite");
+
         public static final Tag.Named<Block> STORAGE_BLOCKS_LEAD = forgeTag("storage_blocks/lead");
         public static final Tag.Named<Block> STORAGE_BLOCKS_TITANIUM = forgeTag("storage_blocks/titanium");
         public static final Tag.Named<Block> STORAGE_BLOCKS_TIN = forgeTag("storage_blocks/tin");
@@ -50,9 +53,14 @@ public final class AtomicTags {
     public static class Items {
         public static final Tags.IOptionalNamedTag<Item> PLATES = forgeCategory("plates");
         public static final Tags.IOptionalNamedTag<Item> RAW_ORES = forgeCategory("raw_ores");
+        public static final Tags.IOptionalNamedTag<Item> COALS = forgeCategory("coals");
         public static final Tags.IOptionalNamedTag<Item> RAW = forgeCategory("raw");
         public static final Tags.IOptionalNamedTag<Item> GEARS = forgeCategory("gears");
         public static final Tags.IOptionalNamedTag<Item> BLENDS = forgeCategory("blends");
+
+        public static final Tag.Named<Item> COALS_COKE = forgeTag("coals/coke");
+
+        public static final Tag.Named<Item> INGOTS_GRAPHITE = forgeTag("ingots/graphite");
 
         public static final Tag.Named<Item> INGOTS_LEAD = forgeTag("ingots/lead");
         public static final Tag.Named<Item> INGOTS_TITANIUM = forgeTag("ingots/titanium");
@@ -67,7 +75,9 @@ public final class AtomicTags {
         public static final Tag.Named<Item> RAW_TIN = forgeTag("raw/tin");
         public static final Tag.Named<Item> RAW_SILVER = forgeTag("raw/silver");
 
+        public static final Tag.Named<Item> DUSTS_COKE = forgeTag("dusts/coke");
         public static final Tag.Named<Item> DUSTS_CARBON = forgeTag("dusts/carbon");
+        public static final Tag.Named<Item> DUSTS_GRAPHITE = forgeTag("dusts/graphite");
 
         public static final Tag.Named<Item> DUSTS_IRON = forgeTag("dusts/iron");
         public static final Tag.Named<Item> DUSTS_GOLD = forgeTag("dusts/gold");
@@ -95,6 +105,8 @@ public final class AtomicTags {
 
         public static final Tag.Named<Item> PLATES_STEEL = forgeTag("plates/steel");
         public static final Tag.Named<Item> PLATES_BRONZE = forgeTag("plates/bronze");
+
+        public static final Tag.Named<Item> RODS_GRAPHITE = forgeTag("rods/graphite");
 
         public static final Tag.Named<Item> RODS_IRON = forgeTag("rods/iron");
         public static final Tag.Named<Item> RODS_GOLD = forgeTag("rods/gold");
@@ -129,6 +141,9 @@ public final class AtomicTags {
         public static final Tag.Named<Item> ORES_TITANIUM = forgeTag("ores/titanium");
         public static final Tag.Named<Item> ORES_TIN = forgeTag("ores/tin");
         public static final Tag.Named<Item> ORES_SILVER = forgeTag("ores/silver");
+
+        public static final Tag.Named<Item> STORAGE_BLOCKS_COKE = forgeTag("storage_blocks/coke");
+        public static final Tag.Named<Item> STORAGE_BLOCKS_GRAPHITE = forgeTag("storage_blocks/graphite");
 
         public static final Tag.Named<Item> STORAGE_BLOCKS_LEAD = forgeTag("storage_blocks/lead");
         public static final Tag.Named<Item> STORAGE_BLOCKS_TITANIUM = forgeTag("storage_blocks/titanium");

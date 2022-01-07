@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:storage_blocks/graphite"
+    }
+  ],
+  "result": {
+    "item": "atomiccomponents:graphite_ingot",
+    "count": 9
+  }
+}

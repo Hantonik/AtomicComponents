@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "atomiccomponents:tin_block",
-    "atomiccomponents:tin_ore"
+    "atomiccomponents:tin_ore",
+    "atomiccomponents:coke_block"
   ]
 }

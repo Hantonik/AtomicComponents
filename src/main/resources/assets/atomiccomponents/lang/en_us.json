@@ -2,6 +2,10 @@
   "itemGroup.atomiccomponents_items": "AtomicComponents - Items",
   "itemGroup.atomiccomponents_blocks": "AtomicComponents - Blocks",
 
+  "item.atomiccomponents.coke": "Coal coke",
+
+  "item.atomiccomponents.graphite_ingot": "Graphite ingot",
+
   "item.atomiccomponents.lead_ingot": "Lead ingot",
   "item.atomiccomponents.titanium_ingot": "Titanium ingot",
   "item.atomiccomponents.tin_ingot": "Tin ingot",
@@ -27,6 +31,8 @@
   "item.atomiccomponents.bronze_plate": "Bronze plate",
   "item.atomiccomponents.steel_plate": "Steel plate",
 
+  "item.atomiccomponents.graphite_rod": "Graphite rod",
+
   "item.atomiccomponents.iron_rod": "Iron rod",
   "item.atomiccomponents.gold_rod": "Golden rod",
 
@@ -39,7 +45,9 @@
   "item.atomiccomponents.bronze_rod": "Bronze rod",
   "item.atomiccomponents.steel_rod": "Steel rod",
 
+  "item.atomiccomponents.coke_dust": "Coke dust",
   "item.atomiccomponents.carbon_dust": "Carbon dust",
+  "item.atomiccomponents.graphite_dust": "Graphite dust",
 
   "item.atomiccomponents.iron_dust": "Iron dust",
   "item.atomiccomponents.gold_dust": "Golden dust",
@@ -68,6 +76,9 @@
   "item.atomiccomponents.bronze_gear": "Bronze gear",
   "item.atomiccomponents.steel_gear": "Steel gear",
 
+  "block.atomiccomponents.coke_block": "Coal coke block",
+  "block.atomiccomponents.graphite_block": "Graphite block",
+
   "block.atomiccomponents.lead_block": "Lead block",
   "block.atomiccomponents.titanium_block": "Titanium block",
   "block.atomiccomponents.tin_block": "Tin block",
@@ -91,9 +102,35 @@
   "block.atomiccomponents.deepslate_tin_ore": "Deepslate tin ore",
   "block.atomiccomponents.deepslate_silver_ore": "Deepslate silver ore",
 
+  "item.atomiccomponents.molten_lead_bucket": "Molten Lead Bucket",
   "item.atomiccomponents.molten_titanium_bucket": "Molten Titanium Bucket",
+  "item.atomiccomponents.molten_tin_bucket": "Molten Tin Bucket",
+  "item.atomiccomponents.molten_silver_bucket": "Molten Silver Bucket",
+  "item.atomiccomponents.molten_bronze_bucket": "Molten Bronze Bucket",
+  "item.atomiccomponents.molten_steel_bucket": "Molten Steel Bucket",
+  "item.atomiccomponents.molten_copper_bucket": "Molten Copper Bucket",
+  "item.atomiccomponents.molten_iron_bucket": "Molten Iron Bucket",
+  "item.atomiccomponents.molten_gold_bucket": "Molten Gold Bucket",
+
+  "block.atomiccomponents.molten_lead_fluid": "Molten Lead",
   "block.atomiccomponents.molten_titanium_fluid": "Molten Titanium",
+  "block.atomiccomponents.molten_tin_fluid": "Molten Tin",
+  "block.atomiccomponents.molten_silver_fluid": "Molten Silver",
+  "block.atomiccomponents.molten_bronze_fluid": "Molten Bronze",
+  "block.atomiccomponents.molten_steel_fluid": "Molten Steel",
+  "block.atomiccomponents.molten_copper_fluid": "Molten Copper",
+  "block.atomiccomponents.molten_iron_fluid": "Molten Iron",
+  "block.atomiccomponents.molten_gold_fluid": "Molten Gold",
+
+  "fluid.atomiccomponents.molten_lead": "Molten Lead",
   "fluid.atomiccomponents.molten_titanium": "Molten Titanium",
+  "fluid.atomiccomponents.molten_tin": "Molten Tin",
+  "fluid.atomiccomponents.molten_silver": "Molten Silver",
+  "fluid.atomiccomponents.molten_bronze": "Molten Bronze",
+  "fluid.atomiccomponents.molten_steel": "Molten Steel",
+  "fluid.atomiccomponents.molten_copper": "Molten Copper",
+  "fluid.atomiccomponents.molten_iron": "Molten Iron",
+  "fluid.atomiccomponents.molten_gold": "Molten Gold",
 
   "attributes.atomiccomponents.hold_for_info": "Hold %s for more information",
 

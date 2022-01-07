@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "atomiccomponents:molten_lead",
+    "atomiccomponents:flowing_molten_lead"
+  ]
+}

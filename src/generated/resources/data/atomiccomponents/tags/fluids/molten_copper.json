@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "atomiccomponents:molten_copper",
+    "atomiccomponents:flowing_molten_copper"
+  ]
+}

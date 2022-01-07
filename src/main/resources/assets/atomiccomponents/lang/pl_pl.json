@@ -2,6 +2,10 @@
   "itemGroup.atomiccomponents_items": "AtomicComponents - Przedmioty",
   "itemGroup.atomiccomponents_blocks": "AtomicComponents - Bloki",
 
+  "item.atomiccomponents.coke": "Koks węglowy",
+
+  "item.atomiccomponents.graphite_ingot": "Sztabka grafitu",
+
   "item.atomiccomponents.lead_ingot": "Sztabka ołowiu",
   "item.atomiccomponents.titanium_ingot": "Sztabka tytanu",
   "item.atomiccomponents.tin_ingot": "Sztabka cyny",
@@ -27,6 +31,8 @@
   "item.atomiccomponents.bronze_plate": "Brązowa płyta",
   "item.atomiccomponents.steel_plate": "Stalowa płyta",
 
+  "item.atomiccomponents.graphite_rod": "Grafitowa elektroda",
+
   "item.atomiccomponents.iron_rod": "Żelazny pręt",
   "item.atomiccomponents.gold_rod": "Złoty pręt",
 
@@ -36,7 +42,9 @@
   "item.atomiccomponents.tin_rod": "Pręt z cyny",
   "item.atomiccomponents.silver_rod": "Srebrny pręt",
 
+  "item.atomiccomponents.coke_dust": "Pył koksowy",
   "item.atomiccomponents.carbon_dust": "Pył węglowy",
+  "item.atomiccomponents.graphite_dust": "Pył grafitowy",
 
   "item.atomiccomponents.iron_dust": "Żelazny pył",
   "item.atomiccomponents.gold_dust": "Złoty pył",
@@ -65,6 +73,9 @@
   "item.atomiccomponents.bronze_gear": "Brązowa zębatka",
   "item.atomiccomponents.steel_gear": "Stalowa zębatka",
 
+  "block.atomiccomponents.coke_block": "Blok kosu węglowego",
+  "block.atomiccomponents.graphite_block": "Blok grafitu",
+
   "block.atomiccomponents.lead_block": "Blok ołowiu",
   "block.atomiccomponents.titanium_block": "Blok tytanu",
   "block.atomiccomponents.tin_block": "Blok cyny",
@@ -88,9 +99,35 @@
   "block.atomiccomponents.deepslate_tin_ore": "Łupkowe złoże cyny",
   "block.atomiccomponents.deepslate_silver_ore": "Łupkowe złoże srebra",
 
+  "item.atomiccomponents.molten_lead_bucket": "Wiadro Stopionego Ołowiu",
   "item.atomiccomponents.molten_titanium_bucket": "Wiadro Stopionego Tytanu",
+  "item.atomiccomponents.molten_tin_bucket": "Wiadro Stopionej Cyny",
+  "item.atomiccomponents.molten_silver_bucket": "Wiadro Stopionego Srebra",
+  "item.atomiccomponents.molten_bronze_bucket": "Wiadro Stopionego Brązu",
+  "item.atomiccomponents.molten_steel_bucket": "Wiadro Stopionej Stali",
+  "item.atomiccomponents.molten_copper_bucket": "Wiadro Stopionej Miedzi",
+  "item.atomiccomponents.molten_iron_bucket": "Wiadro Stopionego Żelaza",
+  "item.atomiccomponents.molten_gold_bucket": "Wiadro Stopionego Złota",
+
+  "block.atomiccomponents.molten_lead_fluid": "Stopiony Ołów",
   "block.atomiccomponents.molten_titanium_fluid": "Stopiony Tytan",
+  "block.atomiccomponents.molten_tin_fluid": "Stopiona Cyna",
+  "block.atomiccomponents.molten_silver_fluid": "Stopione Srebro",
+  "block.atomiccomponents.molten_bronze_fluid": "Stopiony Brąz",
+  "block.atomiccomponents.molten_steel_fluid": "Stopiona Stal",
+  "block.atomiccomponents.molten_copper_fluid": "Stopiona Miedź",
+  "block.atomiccomponents.molten_iron_fluid": "Stopione Żelazo",
+  "block.atomiccomponents.molten_gold_fluid": "Stopione Złoto",
+
+  "fluid.atomiccomponents.molten_lead": "Stopiony Ołów",
   "fluid.atomiccomponents.molten_titanium": "Stopiony Tytan",
+  "fluid.atomiccomponents.molten_tin": "Stopiona Cyna",
+  "fluid.atomiccomponents.molten_silver": "Stopione Srebro",
+  "fluid.atomiccomponents.molten_bronze": "Stopiony Brąz",
+  "fluid.atomiccomponents.molten_steel": "Stopiona Stal",
+  "fluid.atomiccomponents.molten_copper": "Stopiona Miedź",
+  "fluid.atomiccomponents.molten_iron": "Stopione Żelazo",
+  "fluid.atomiccomponents.molten_gold": "Stopione Złoto",
 
   "attributes.atomiccomponents.hold_for_info": "Przytrzymaj %s po więcej informacji",
 

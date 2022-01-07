@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:dusts/carbon"
+  },
+  "result": "atomiccomponents:coke_dust",
+  "experience": 0.6,
+  "cookingtime": 400
+}

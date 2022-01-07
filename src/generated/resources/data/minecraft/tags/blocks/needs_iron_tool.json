@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "atomiccomponents:graphite_block",
     "atomiccomponents:lead_block",
     "atomiccomponents:lead_ore",
     "atomiccomponents:silver_block",

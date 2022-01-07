@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/crafting/shapeless/graphite_ingot"
+    ]
+  },
+  "criteria": {
+    "has_forge:storage_blocks/graphite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:storage_blocks/graphite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/crafting/shapeless/graphite_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_forge:storage_blocks/graphite",
+      "has_the_recipe"
+    ]
+  ]
+}

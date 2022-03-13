@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "atomiccomponents:titanium_block",
+    "atomiccomponents:titanium_ore",
+    "atomiccomponents:deepslate_titanium_ore",
+    "atomiccomponents:raw_titanium_block",
+    "atomiccomponents:steel_block",
+    "atomiccomponents:graphite_block",
+    "atomiccomponents:lead_block",
+    "atomiccomponents:lead_ore",
+    "atomiccomponents:deepslate_lead_ore",
+    "atomiccomponents:raw_lead_block",
+    "atomiccomponents:silver_block",
+    "atomiccomponents:silver_ore",
+    "atomiccomponents:deepslate_silver_ore",
+    "atomiccomponents:raw_silver_block",
+    "atomiccomponents:aluminum_block",
+    "atomiccomponents:aluminum_ore",
+    "atomiccomponents:deepslate_aluminum_ore",
+    "atomiccomponents:raw_aluminum_block",
+    "atomiccomponents:bronze_block",
+    "atomiccomponents:tin_block",
+    "atomiccomponents:tin_ore",
+    "atomiccomponents:deepslate_tin_ore",
+    "atomiccomponents:raw_tin_block",
+    "atomiccomponents:coke_block"
+  ]
+}

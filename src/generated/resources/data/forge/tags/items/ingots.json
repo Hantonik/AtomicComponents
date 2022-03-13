@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ingots/graphite",
+    "#forge:ingots/aluminum",
+    "#forge:ingots/lead",
+    "#forge:ingots/titanium",
+    "#forge:ingots/tin",
+    "#forge:ingots/silver",
+    "#forge:ingots/steel",
+    "#forge:ingots/bronze"
+  ]
+}

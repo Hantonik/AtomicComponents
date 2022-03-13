@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/blasting/lead_ingot_from_ore"
+    ]
+  },
+  "criteria": {
+    "has_ores/lead": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ores/lead"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/blasting/lead_ingot_from_ore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ores/lead",
+      "has_the_recipe"
+    ]
+  ]
+}

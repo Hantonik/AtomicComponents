@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="MIT"
+
+[[mods]]
+    modId="atomiccomponents"
+    version="${mod_version}"
+    displayName="${mod_name}"
+    displayURL="https://www.curseforge.com/minecraft/mc-mods/atomiccomponents"
+    logoFile= "logo.png"
+    updateJSONURL="https://raw.githubusercontent.com/Hantonik/AtomicComponents/1.18.2/update.json"
+    authors="Hantonik"
+    description='''This mod adds some materials that might come in handy for other mods in the Atomic Series.
+    '''
+
+[[dependencies.atomiccomponents]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.atomiccomponents]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.atomiccomponents]]
+    modId="atomiccore"
+    mandatory=true
+    versionRange="${core_version}"
+    ordering="BEFORE"
+    side="BOTH"

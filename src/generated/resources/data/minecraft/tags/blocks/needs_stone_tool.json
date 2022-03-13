@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "atomiccomponents:tin_block",
+    "atomiccomponents:tin_ore",
+    "atomiccomponents:deepslate_tin_ore",
+    "atomiccomponents:raw_tin_block",
+    "atomiccomponents:coke_block"
+  ]
+}

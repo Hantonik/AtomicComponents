@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/crafting/shapeless/coke"
+    ]
+  },
+  "criteria": {
+    "has_storage_blocks/coke": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:storage_blocks/coke"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/crafting/shapeless/coke"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_storage_blocks/coke",
+      "has_the_recipe"
+    ]
+  ]
+}

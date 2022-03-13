@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "atomiccomponents:aluminum_ore",
+    "atomiccomponents:lead_ore",
+    "atomiccomponents:titanium_ore",
+    "atomiccomponents:tin_ore",
+    "atomiccomponents:silver_ore"
+  ]
+}

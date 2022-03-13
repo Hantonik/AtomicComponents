@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "atomiccomponents:deepslate_aluminum_ore",
+    "atomiccomponents:deepslate_lead_ore",
+    "atomiccomponents:deepslate_titanium_ore",
+    "atomiccomponents:deepslate_tin_ore",
+    "atomiccomponents:deepslate_silver_ore"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/smelting/steel_ingot_from_dust"
+    ]
+  },
+  "criteria": {
+    "has_dusts/steel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:dusts/steel"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/smelting/steel_ingot_from_dust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dusts/steel",
+      "has_the_recipe"
+    ]
+  ]
+}

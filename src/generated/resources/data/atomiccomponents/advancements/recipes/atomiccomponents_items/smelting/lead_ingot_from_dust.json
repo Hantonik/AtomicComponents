@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/smelting/lead_ingot_from_dust"
+    ]
+  },
+  "criteria": {
+    "has_dusts/lead": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:dusts/lead"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/smelting/lead_ingot_from_dust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dusts/lead",
+      "has_the_recipe"
+    ]
+  ]
+}

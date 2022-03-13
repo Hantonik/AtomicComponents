@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "atomiccomponents:graphite_block",
+    "atomiccomponents:lead_block",
+    "atomiccomponents:lead_ore",
+    "atomiccomponents:deepslate_lead_ore",
+    "atomiccomponents:raw_lead_block",
+    "atomiccomponents:silver_block",
+    "atomiccomponents:silver_ore",
+    "atomiccomponents:deepslate_silver_ore",
+    "atomiccomponents:raw_silver_block",
+    "atomiccomponents:aluminum_block",
+    "atomiccomponents:aluminum_ore",
+    "atomiccomponents:deepslate_aluminum_ore",
+    "atomiccomponents:raw_aluminum_block",
+    "atomiccomponents:bronze_block"
+  ]
+}

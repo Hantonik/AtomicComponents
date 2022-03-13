@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:ores/titanium"
+  },
+  "result": "atomiccomponents:titanium_ingot",
+  "experience": 0.3,
+  "cookingtime": 130
+}

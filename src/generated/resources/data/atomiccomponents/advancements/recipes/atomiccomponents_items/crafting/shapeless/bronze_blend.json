@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/crafting/shapeless/bronze_blend"
+    ]
+  },
+  "criteria": {
+    "has_dusts/copper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:dusts/copper"
+          }
+        ]
+      }
+    },
+    "has_dusts/tin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:dusts/tin"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/crafting/shapeless/bronze_blend"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dusts/copper",
+      "has_dusts/tin",
+      "has_the_recipe"
+    ]
+  ]
+}

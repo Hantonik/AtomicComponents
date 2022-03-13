@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/blasting/tin_ingot_from_raw"
+    ]
+  },
+  "criteria": {
+    "has_raw_materials/tin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:raw_materials/tin"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/blasting/tin_ingot_from_raw"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_materials/tin",
+      "has_the_recipe"
+    ]
+  ]
+}

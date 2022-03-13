@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/crafting/shaped/coke_block"
+    ]
+  },
+  "criteria": {
+    "has_coke": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:coals/coke"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/crafting/shaped/coke_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_coke",
+      "has_the_recipe"
+    ]
+  ]
+}

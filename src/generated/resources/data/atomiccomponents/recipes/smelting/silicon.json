@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:gems/quartz"
+  },
+  "result": "atomiccomponents:silicon",
+  "experience": 0.5,
+  "cookingtime": 180
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:raw_materials/aluminum",
+    "#forge:raw_materials/lead",
+    "#forge:raw_materials/titanium",
+    "#forge:raw_materials/tin",
+    "#forge:raw_materials/silver"
+  ]
+}

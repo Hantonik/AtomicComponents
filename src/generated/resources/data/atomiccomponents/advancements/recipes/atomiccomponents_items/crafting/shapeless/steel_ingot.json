@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "atomiccomponents:/crafting/shapeless/steel_ingot"
+    ]
+  },
+  "criteria": {
+    "has_storage_blocks/steel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:storage_blocks/steel"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "atomiccomponents:/crafting/shapeless/steel_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_storage_blocks/steel",
+      "has_the_recipe"
+    ]
+  ]
+}

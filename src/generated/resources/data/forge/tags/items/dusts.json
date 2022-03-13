@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:dusts/silicon",
+    "#forge:dusts/coke",
+    "#forge:dusts/carbon",
+    "#forge:dusts/graphite",
+    "#forge:dusts/iron",
+    "#forge:dusts/gold",
+    "#forge:dusts/copper",
+    "#forge:dusts/aluminum",
+    "#forge:dusts/lead",
+    "#forge:dusts/titanium",
+    "#forge:dusts/tin",
+    "#forge:dusts/silver",
+    "#forge:dusts/steel",
+    "#forge:dusts/bronze"
+  ]
+}

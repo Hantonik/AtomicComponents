@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:raw_materials/lead"
+  },
+  "result": "atomiccomponents:lead_ingot",
+  "experience": 0.3,
+  "cookingtime": 120
+}
